@@ -2,16 +2,64 @@
 
 import React from "react";
 
-import { motion } from "framer-motion";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const comapnies = [
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    },
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    },
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    },
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    },
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    }
+];
 
 export default function Home() {
-    return (
-        <motion.div
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="px-4 py-2 rounded border border-muted"
-        >
-            <h2 className="text-3xl font-semibold">Hello World!</h2>
-        </motion.div>
-    );
+  return (
+    <Carousel className="w-full max-w-5xl mx-auto">
+      <CarouselContent>
+        {comapnies.map((item, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <div className="p-1">
+              <Card>
+                <CardHeader>
+                    <CardTitle>{item.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>{item.description}</p>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
 }

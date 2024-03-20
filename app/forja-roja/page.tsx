@@ -1,9 +1,5 @@
-import React from 'react'
+import * as React from "react"
 
-const page = () => {
-  return (
-    <div>Forja Roja</div>
-  )
+export default function page() {
+  return <></>;
 }
-
-export default page

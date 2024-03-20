@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={inter.className} >
                 <NextTopLoader color="#00B4D8" showSpinner={false} />
                 <Navbar />
                 <main className="relative container mx-auto py-24">
