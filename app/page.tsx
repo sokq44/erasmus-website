@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -15,20 +15,43 @@ const comapnies = [
     {
         name: "Forja Roja",
         // logo: ,
-        
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    },
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    },
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    },
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
+    },
+    {
+        name: "Forja Roja",
+        // logo: ,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit enim commodi, saepe quia dicta cumque laudantium minima sequi neque? Consequuntur delectus, autem tempore in ducimus explicabo a minus excepturi.",
     }
 ];
 
 export default function Home() {
   return (
-    <Carousel className="w-full max-w-xs mx-auto">
+    <Carousel className="w-full max-w-5xl mx-auto">
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
+        {comapnies.map((item, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+                <CardHeader>
+                    <CardTitle>{item.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>{item.description}</p>
                 </CardContent>
               </Card>
             </div>
