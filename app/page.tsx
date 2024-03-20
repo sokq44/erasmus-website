@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 
 export default function Home() {
     return (
-        <motion.h2
-            className="text-3xl font-semibold"
+        <motion.div
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
+            className="px-4 py-2 rounded border border-muted"
         >
-            Hello World!
-        </motion.h2>
+            <h2 className="text-3xl font-semibold">Hello World!</h2>
+        </motion.div>
     );
 }

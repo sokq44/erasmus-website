@@ -8,7 +8,7 @@ const Navbar: FC<Props> = () => {
     return (
         <header className="py-6 bg-gradient-to-br from-red-600 via-red-500 to-red-700">
             <nav className="container relative mx-auto flex justify-between items-center">
-                <Link href={"/"} className="group">
+                <Link href={"/forja-roja"} className="group">
                     <h1 className="text-4xl text-white font-bold group-hover:text-red-100 transition">
                         Erasmus
                     </h1>
