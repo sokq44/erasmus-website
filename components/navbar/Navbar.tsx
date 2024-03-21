@@ -14,7 +14,18 @@ const Navbar: FC<Props> = () => {
                     </h1>
                 </Link>
 
-                <MobileMenu className="md:hidden" />
+                <div className="md:hidden">
+                    <MobileMenu />
+                </div>
+
+                <ul className="hidden md:flex gap-8">
+                    <Link
+                        href={"#companies"}
+                        className="text-white hover:bg-blue-700 transition duration-300 px-2 py-1 rounded"
+                    >
+                        Companies
+                    </Link>
+                </ul>
             </nav>
         </header>
     );

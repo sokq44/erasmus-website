@@ -1,14 +1,21 @@
 import React, { FC } from "react";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
+import * as Sheet from "../ui/sheet";
 
-interface Props extends React.HTMLAttributes<"button"> {}
+interface Props {}
 
-const MobileMenu: FC<Props> = (props) => {
+const MobileMenu: FC<Props> = () => {
     return (
-        <Button size={"icon"} variant={"outline"} className={props.className}>
-            <Menu />
-        </Button>
+        <Sheet.Sheet>
+            <Sheet.SheetTrigger asChild>
+                <Button size={"icon"} variant={"outline"}>
+                    <Menu />
+                </Button>
+            </Sheet.SheetTrigger>
+
+            <Sheet.SheetContent></Sheet.SheetContent>
+        </Sheet.Sheet>
     );
 };
 
