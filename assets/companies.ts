@@ -12,6 +12,11 @@ export const companies: Company[] = [
             street: "Street 1",
             number: "1",
         },
+
+        backgroundGradient: {
+            from: "from-red-500",
+            to: "to-orange-500",
+        },
     },
     {
         name: "Company 2",
@@ -21,6 +26,11 @@ export const companies: Company[] = [
             city: "City 2",
             street: "Street 2",
             number: "2",
+        },
+
+        backgroundGradient: {
+            from: "from-green-500",
+            to: "to-blue-500",
         },
     },
 ];

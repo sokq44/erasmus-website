@@ -9,4 +9,9 @@ export type Company = {
         street: string;
         number: string;
     };
+
+    backgroundGradient: {
+        from: string;
+        to: string;
+    };
 };
