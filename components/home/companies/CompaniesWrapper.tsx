@@ -18,9 +18,13 @@ const CompaniesWrapper: FC<Props> = () => {
                 quisquam! Itaque, adipisci.
             </p>
 
-            <div>
-                {companies.map((company) => (
-                    <CompanyCard key={company.name} company={company} />
+            <div className="grid grid-cols-2 gap-16 mt-16">
+                {companies.map((company, index) => (
+                    <CompanyCard
+                        key={company.name}
+                        company={company}
+                        index={index}
+                    />
                 ))}
             </div>
         </Container>

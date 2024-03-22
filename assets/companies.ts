@@ -17,6 +17,8 @@ export const companies: Company[] = [
             from: "from-red-500",
             to: "to-orange-500",
         },
+
+        href: "forja-roja",
     },
     {
         name: "Company 2",
@@ -32,6 +34,8 @@ export const companies: Company[] = [
             from: "from-green-500",
             to: "to-blue-500",
         },
+
+        href: "company-2",
     },
 
     {
@@ -46,8 +50,10 @@ export const companies: Company[] = [
 
         backgroundGradient: {
             from: "from-yellow-500",
-            to: "to-indigo-500",
+            to: "to-amber-500",
         },
+
+        href: "company-3",
     },
 
     {
@@ -64,6 +70,8 @@ export const companies: Company[] = [
             from: "from-pink-500",
             to: "to-purple-500",
         },
+
+        href: "company-4",
     },
 
     {
@@ -77,8 +85,10 @@ export const companies: Company[] = [
         },
 
         backgroundGradient: {
-            from: "from-red-500",
-            to: "to-orange-500",
+            from: "from-teal-500",
+            to: "to-cyan-500",
         },
+
+        href: "company-5",
     },
 ];
