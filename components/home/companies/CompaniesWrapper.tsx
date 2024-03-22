@@ -41,7 +41,7 @@ const CompaniesWrapper: FC<Props> = () => {
                 quisquam! Itaque, adipisci.
             </p>
 
-            <div className="grid grid-cols-2 gap-16 mt-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mt-16">
                 {companies.map((company, index) => (
                     <CompanyCard
                         key={company.name}

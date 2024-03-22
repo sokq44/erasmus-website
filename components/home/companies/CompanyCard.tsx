@@ -21,7 +21,7 @@ const CompanyCard: FC<Props> = (props) => {
         <Link
             href={`/companies/${props.company.name}`}
             className={`group bg-transparent ${
-                props.index % 2 === 1 ? "translate-y-16" : ""
+                props.index % 2 === 1 ? "lg:translate-y-16" : ""
             } `}
         >
             <motion.div whileHover={{ y: -5 }}>
