@@ -6,9 +6,32 @@ import Container from "@/components/Container";
 
 interface Props {}
 
+const backgroundGradients: { from: string; to: string }[] = [
+    {
+        from: "from-red-500",
+        to: "to-orange-500",
+    },
+    {
+        from: "from-green-500",
+        to: "to-blue-500",
+    },
+    {
+        from: "from-yellow-500",
+        to: "to-amber-500",
+    },
+    {
+        from: "from-pink-500",
+        to: "to-purple-500",
+    },
+    {
+        from: "from-teal-500",
+        to: "to-cyan-500",
+    },
+];
+
 const CompaniesWrapper: FC<Props> = () => {
     return (
-        <Container className="gap-8">
+        <Container className="gap-8 z-10">
             <h2 className="text-3xl font-semibold text-blue-950">Companies</h2>
 
             <p className="max-w-2xl text-muted-foreground">
@@ -24,6 +47,7 @@ const CompaniesWrapper: FC<Props> = () => {
                         key={company.name}
                         company={company}
                         index={index}
+                        backgroundGradient={backgroundGradients[index]}
                     />
                 ))}
             </div>

@@ -6,20 +6,26 @@ import React, { FC } from "react";
 interface Props {
     company: Company;
     index: number;
+    backgroundGradient: {
+        from: string;
+        to: string;
+    };
 }
 
 const CompanyCard: FC<Props> = (props) => {
     return (
         <Link
             href={`/companies/${props.company.name}`}
-            className="group bg-transparent"
+            className={`group bg-transparent ${
+                props.index % 2 === 1 ? "translate-y-16" : ""
+            } `}
         >
             <div
-                className={`group-hover:-translate-y-1 transition duration-300 bg-gradient-to-br ${props.company.backgroundGradient.from} ${props.company.backgroundGradient.to} p-3 rounded-xl`}
+                className={`group-hover:-translate-y-1 transition duration-300 bg-gradient-to-br ${props.backgroundGradient.from} ${props.backgroundGradient.to} p-3 rounded-xl`}
             >
                 <Card.Card
                     className={`bg-background ${
-                        props.index % 2 === 1 ? "" : ""
+                        props.index % 2 === 1 ? "row-start-2" : ""
                     }`}
                 >
                     {/* TODO: Add displaying cards underneath the other ones here */}
