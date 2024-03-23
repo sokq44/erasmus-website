@@ -19,7 +19,7 @@ import Container from "@/components/home/Container";
           {Array.from({ length: 10 }).map((_, index) => (
             <CarouselItem key={index} className="lg:basis-1/3 md:basis-1/2">
               <div className="p-1">
-                <Card>
+                <Card className="shadow-md">
                   <CardHeader>
                     <div className="flex items-stretch">
                       <span className="text-3xl">Name</span>
