@@ -5,7 +5,7 @@ export const companies: Company[] = [
         name: "Forja Roja",
         imageSrc: "https://via.placeholder.com/150",
         description:
-            "Forja Roja is a software development company that specializes in mobile game development and 3D modelling.",
+            "Forja Roja to firma z siedzibą w Maladze, specjalizująca się w tworzeniu gier wideo i modelowaniu 3D. Forja Roja współpracuje z programem Erasmus+, oferując praktyki dla studentów z całej Europy.",
         address: {
             country: "Spain",
             city: "Malaga",
