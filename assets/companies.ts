@@ -21,8 +21,9 @@ export const companies: Company[] = [
         href: "forja-roja",
     },
     {
-        name: "Company 2",
-        description: "Description for company 2",
+        name: "Microbit Servicio Tecnico",
+        description:
+            "Microbit Servicio Tecnico to firma z siedzibą w Maladze, specjalizująca się w naprawie sprzętu elektronicznego. Firma oferuje praktyki dla studentów z programu Erasmus+.",
         address: {
             country: "Country 2",
             city: "City 2",
@@ -39,8 +40,9 @@ export const companies: Company[] = [
     },
 
     {
-        name: "Company 3",
-        description: "Description for company 3",
+        name: "Samsung Electronics",
+        description:
+            "Samsung Electronics to firma z siedzibą w Seulu, specjalizująca się w produkcji elektroniki. Firma oferuje praktyki dla studentów z programu Erasmus+.",
         address: {
             country: "Country 3",
             city: "City 3",
@@ -57,8 +59,9 @@ export const companies: Company[] = [
     },
 
     {
-        name: "Company 4",
-        description: "Description for company 4",
+        name: "EuroMind",
+        description:
+            "EuroMind to firma z siedzibą w Maladze, specjalizująca się w organizacji praktyk zawodowych dla studentów z programu Erasmus+.",
         address: {
             country: "Country 4",
             city: "City 4",
@@ -75,8 +78,9 @@ export const companies: Company[] = [
     },
 
     {
-        name: "Company 5",
-        description: "Description for company 5",
+        name: "Firma Oliwiera",
+        description:
+            "Firma Oliwiera to firma z siedzibą w Gdańsku, specjalizująca się w tworzeniu oprogramowania. Firma oferuje praktyki dla studentów z programu Erasmus+.",
         address: {
             country: "Country 5",
             city: "City 5",
