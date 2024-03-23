@@ -13,6 +13,73 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import Container from "@/components/home/Container";
 
+const membersTestimonials: {
+  name: string;
+  img: string;
+  testimonial: string;
+}[] = [
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+  {
+    name: "Name",
+    img: "https://github.com/shadcn.png",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, itaque alias? Nihil nulla placeat, recusandae explicabo odio sequi eaque amet reiciendis necessitatibus minus illum maxime tenetur maiores iusto ex! Quod.",
+  },
+];
+
 const Testimonials = () => {
   return (
     <Container shouldAnimate={false}>
@@ -21,25 +88,25 @@ const Testimonials = () => {
       </h2>
       <Carousel className="m-auto mt-10 w-[80%]">
         <CarouselContent>
-          {Array.from({ length: 10 }).map((_, index) => (
-            <CarouselItem key={index} className="lg:basis-1/3 md:basis-1/2 drop-shadow-[3px_3px_1px_rgba(3,4,94,1)]">
+          {membersTestimonials.map((_, index) => (
+            <CarouselItem
+              key={index}
+              className="lg:basis-1/3 md:basis-1/2 drop-shadow-[3px_3px_1px_rgba(3,4,94,1)]"
+            >
               <div className="p-1">
-                <Card className="">
+                <Card>
                   <CardHeader>
                     <div className="flex items-stretch">
-                      <span className="text-3xl font-semibold">Name</span>
+                      <span className="text-3xl font-semibold">{membersTestimonials[index].name}</span>
                       <Avatar className="ml-auto size-[30%]">
-                        <AvatarImage src="https://github.com/shadcn.png" />
-                        <AvatarFallback>CN</AvatarFallback>
+                        <AvatarImage src={membersTestimonials[index].img} />
+                        <AvatarFallback>U</AvatarFallback>
                       </Avatar>
                     </div>
                   </CardHeader>
                   <CardContent className="flex items-center">
                     <span className="text-1xl">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eum, itaque alias? Nihil nulla placeat, recusandae
-                      explicabo odio sequi eaque amet reiciendis necessitatibus
-                      minus illum maxime tenetur maiores iusto ex! Quod.
+                      {membersTestimonials[index].testimonial}
                     </span>
                   </CardContent>
                 </Card>
