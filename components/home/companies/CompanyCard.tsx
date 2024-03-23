@@ -4,6 +4,7 @@ import * as Card from "@/components/ui/card";
 import { Company } from "@/types/company";
 import Link from "next/link";
 import React, { FC } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface Props {
     company: Company;
@@ -14,29 +15,37 @@ interface Props {
     };
 }
 
-import { motion } from "framer-motion";
-
 const CompanyCard: FC<Props> = (props) => {
+    const ref = React.useRef<HTMLDivElement>(null);
+    const inView = useInView(ref, { margin: "150px 0px 0px 0px", once: true });
+
     return (
         <Link
             href={`/companies/${props.company.name}`}
             className={`group bg-transparent ${
                 props.index % 2 === 1 ? "lg:translate-y-16" : ""
-            } `}
+            } focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-4 transition duration-300 rounded-xl `}
         >
-            <motion.div whileHover={{ y: -5 }}>
+            <motion.div ref={ref} whileHover={{ y: -5 }}>
                 <motion.div
                     className={`group-hover:-translate-y-1 transition duration-300 bg-gradient-to-br ${props.backgroundGradient.from} ${props.backgroundGradient.to} p-3 rounded-xl`}
                     initial={
                         props.index % 2 === 1
-                            ? { x: 1000, opacity: 0 }
+                            ? { x: -1000, opacity: 0 }
                             : { x: -1000, opacity: 0 }
                     }
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.15, delay: 0.15 * props.index }}
+                    animate={
+                        inView
+                            ? { x: 0, opacity: 1 }
+                            : {
+                                  x: props.index % 2 === 0 ? -1000 : 1000,
+                                  opacity: 0,
+                              }
+                    }
+                    transition={{ duration: 0.2 }}
                 >
                     <Card.Card>
-                        <Card.CardHeader className="max-w-md">
+                        <Card.CardHeader className="max-w-md flex flex-col gap-4">
                             <Card.CardTitle>
                                 {props.company.name}
                             </Card.CardTitle>
