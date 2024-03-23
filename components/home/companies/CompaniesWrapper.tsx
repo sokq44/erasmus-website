@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import { companies } from "@/assets/companies";
 import CompanyCard from "./CompanyCard";
-import Container from "@/components/Container";
+import Container from "@/components/home/Container";
 
 interface Props {}
 
