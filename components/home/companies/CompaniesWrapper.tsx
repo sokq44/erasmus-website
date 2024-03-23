@@ -1,10 +1,8 @@
-import React, { FC } from "react";
+import React from "react";
 
 import { companies } from "@/assets/companies";
 import CompanyCard from "./CompanyCard";
-import Container from "@/components/Container";
-
-interface Props {}
+import Container from "@/components/home/Container";
 
 const backgroundGradients: { from: string; to: string }[] = [
     {
@@ -29,7 +27,7 @@ const backgroundGradients: { from: string; to: string }[] = [
     },
 ];
 
-const CompaniesWrapper: FC<Props> = () => {
+const CompaniesWrapper = () => {
     return (
         <Container className="gap-8 z-10">
             <h2 className="text-3xl font-semibold text-blue-950 ">Companies</h2>
