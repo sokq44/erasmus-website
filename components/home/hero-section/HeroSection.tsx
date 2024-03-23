@@ -4,9 +4,7 @@ import GeneratedDescription from "@/components/home/hero-section/GeneratedDescri
 import HeroTitle from "@/components/home/hero-section/HeroTitle";
 import Container from "@/components/home/Container";
 
-interface Props {}
-
-const HeroSection: FC<Props> = (props) => {
+const HeroSection = () => {
   return (
     <>
       <Container className="pt-2">
