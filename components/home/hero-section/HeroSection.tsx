@@ -1,13 +1,11 @@
-import React, { FC } from "react";
+import React from "react";
 
 import Blob from "@/components/home/hero-section/Blob";
 import GeneratedDescription from "@/components/home/hero-section/GeneratedDescription";
 import HeroTitle from "@/components/home/hero-section/HeroTitle";
 import Container from "@/components/home/Container";
 
-interface Props {}
-
-const HeroSection: FC<Props> = (props) => {
+const HeroSection = () => {
   return (
       <Container className="pt-2">
         <HeroTitle className="from-[#03045E] to-[#0077B6]">

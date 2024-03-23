@@ -13,9 +13,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import Container from "@/components/home/Container";
 
-interface Props {}
-
-const Testimonials: FC<Props> = (props) => {
+  const Testimonials = () => {
   return (
     <Container shouldAnimate={false}>
       <Carousel>
