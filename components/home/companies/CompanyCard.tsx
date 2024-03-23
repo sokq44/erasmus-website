@@ -17,7 +17,7 @@ interface Props {
 
 const CompanyCard: FC<Props> = (props) => {
     const ref = React.useRef<HTMLDivElement>(null);
-    const inView = useInView(ref, { margin: "150px 0px 0px 0px" });
+    const inView = useInView(ref, { margin: "150px 0px 0px 0px", once: true });
     return (
         <Link
             href={`/companies/${props.company.name}`}
