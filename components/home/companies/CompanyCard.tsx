@@ -26,7 +26,7 @@ const CompanyCard: FC<Props> = (props) => {
                 props.index % 2 === 1 ? "lg:translate-y-16" : ""
             } focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-4 transition duration-300 rounded-xl `}
         >
-            <motion.div ref={ref}>
+            <motion.div ref={ref} whileHover={{ y: -5 }}>
                 <motion.div
                     className={`group-hover:-translate-y-1 transition duration-300 bg-gradient-to-br ${props.backgroundGradient.from} ${props.backgroundGradient.to} p-3 rounded-xl`}
                     initial={

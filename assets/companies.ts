@@ -78,9 +78,9 @@ export const companies: Company[] = [
     },
 
     {
-        name: "Firma Oliwiera",
+        name: "JC VALVUAR AUDIO",
         description:
-            "Firma Oliwiera to firma z siedzibą w Gdańsku, specjalizująca się w tworzeniu oprogramowania. Firma oferuje praktyki dla studentów z programu Erasmus+.",
+            "JC VALVUAR AUDIO to firma z siedzibą w Maladze, specjalizująca się w produkcji wzmacniaczy gitarowych. Firma oferuje praktyki dla studentów z programu Erasmus+.",
         address: {
             country: "Country 5",
             city: "City 5",
