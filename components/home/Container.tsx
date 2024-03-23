@@ -21,7 +21,7 @@ const Container: FC<Props> = (props) => {
       {props.children}
     </motion.section>
   ) : (
-    <section className={cn("py-24 flex flex-col", props.className)}>
+    <section className={cn("py-24 flex flex-col mb-10", props.className)}>
       {props.children}
     </section>
   );
