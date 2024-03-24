@@ -12,7 +12,7 @@ const HeroSection = () => {
                 Malaga Erasmus Program
             </HeroTitle>
             <GeneratedDescription
-                className="text-muted-foreground mt-8 w-[66%]"
+                className="text-muted-foreground mt-8 w-[66%] text-lg"
                 delay={0.05}
             >
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
