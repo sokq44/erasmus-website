@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React, { FC } from "react";
 
 interface Props {
@@ -7,11 +8,17 @@ interface Props {
 
 const HeroTitle: FC<Props> = (props) => {
     const { children, className } = props;
-    const mergedClasses =
-        "hero-title text-4xl text-transparent font-semibold bg-clip-text bg-gradient-to-br " +
-        className;
 
-    return <h1 className={mergedClasses}>{children}</h1>;
+    return (
+        <h1
+            className={cn(
+                "text-4xl text-transparent font-semibold bg-clip-text self-start bg-gradient-to-r",
+                className
+            )}
+        >
+            {children}
+        </h1>
+    );
 };
 
 export default HeroTitle;

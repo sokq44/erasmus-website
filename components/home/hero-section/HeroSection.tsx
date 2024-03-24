@@ -8,7 +8,7 @@ import Container from "@/components/home/Container";
 const HeroSection = () => {
     return (
         <Container className="pt-2">
-            <HeroTitle className="from-[#03045E] to-[#0077B6]">
+            <HeroTitle className="from-[#03045E] to-[#0077B6] py-1">
                 Malaga Erasmus Program
             </HeroTitle>
             <GeneratedDescription
