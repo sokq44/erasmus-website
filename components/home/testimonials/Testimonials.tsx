@@ -18,7 +18,7 @@ import { testimonials } from "@/assets/testimonials";
 const Testimonials = () => {
   return (
     <Container shouldAnimate={false}>
-      <h2 className="text-3xl font-semibold text-blue-950 m-auto">
+      <h2 id="testimonials" className="text-3xl font-semibold text-blue-950 m-auto">
         Testimonials
       </h2>
       <Carousel className="m-auto mt-10 w-[80%]">

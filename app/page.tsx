@@ -13,7 +13,6 @@ export default function Home() {
             <HeroSection />
             <CompaniesWrapper />
             <Testimonials />
-            <Footer />
         </>
     );
 }

@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 
-import Link from "next/link";
-
 import Container from "@/components/home/Container";
+import FooterItem from "./FooterItem";
+
+import {GithubIcon} from "lucide-react";
 
 interface Props {
   children?: React.ReactNode;
@@ -11,38 +12,35 @@ interface Props {
 const Footer: FC<Props> = (props) => {
   const { children } = props;
   return (
-    <Container className="py-0">
-      <div className="flex flex-row">
+    <Container className="py-10 bg-[#03045E] text-white">
+      <div className="flex">
         <div className="ml-[25%]">
-          <h4 className="font-semibold text-lg">Organisers:</h4>
+          <h4 className="font-bold text-lg ml-1">Organisers:</h4>
           <ul>
-            <li>
-              <Link href="https://github.com/sokq44/">ZSEIL</Link>
-            </li>
-            <li>
-              <Link href="https://github.com/KoniczynSzef/">Euromind</Link>
-            </li>
-            <li>
-              <Link href="https://github.com/KoniczynSzef/">
-                European Union
-              </Link>
-            </li>
+            <FooterItem href="https://zseil.edu.pl/new/">ZSEIL</FooterItem>
+            <FooterItem href="https://euromind.es/?lang=pl">
+              Euromind
+            </FooterItem>
+            <FooterItem href="https://european-union.europa.eu/index_pl">
+              European Union
+            </FooterItem>
           </ul>
         </div>
         <div className="ml-[25%]">
-          <h4 className="font-semibold text-lg">Authors:</h4>
+          <h4 className="font-bold text-lg ml-1">Authors:</h4>
           <ul>
-            <li>
-              <Link href="https://github.com/sokq44/">Michał Socki</Link>
-            </li>
-            <li>
-              <Link href="https://github.com/KoniczynSzef/">Piotr Kończyk</Link>
-            </li>
+            <FooterItem href="https://github.com/sokq44/" icon={<GithubIcon />}>
+              Michał Socki
+            </FooterItem>
+            <FooterItem href="https://github.com/KoniczynSzef/" icon={<GithubIcon />}>
+              Piotr Kończyk
+            </FooterItem>
           </ul>
         </div>
-        <div className="m-auto">
-            Copyright
-        </div>
+      </div>
+      <div className="m-auto mt-10">
+        &copy; Copyright 2024 Zespół Szkół Elektronicznych i Licealnych w
+        Warszawie
       </div>
       {children}
     </Container>
