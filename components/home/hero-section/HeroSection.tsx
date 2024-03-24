@@ -8,13 +8,13 @@ import ImagesGrid from "./ImagesGrid";
 
 const HeroSection = () => {
     return (
-        <Container className="py-0 flex justify-between flex-row relative">
-            <div>
+        <Container className="py-0 flex justify-between lg:justify-center xl:justify-between flex-col lg:flex-row relative gap-16 lg:gap-8">
+            <div className="flex flex-col">
                 <HeroTitle className="from-[#03045E] to-[#0077B6] py-1">
                     Malaga Erasmus Program
                 </HeroTitle>
                 <GeneratedDescription
-                    className="text-muted-foreground mt-8 w-[66%] text-lg"
+                    className="text-muted-foreground mt-8 md:w-[66%] text-lg"
                     delay={0.05}
                 >
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
