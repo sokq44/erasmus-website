@@ -26,7 +26,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <CarouselItem
               key={index}
-              className="lg:basis-1/3 md:basis-1/2 drop-shadow-[3px_3px_2px_rgba(3,4,94,1)]"
+              className="lg:basis-1/3 md:basis-1/2 drop-shadow-[1px_1px_1px_rgba(0,180,216,1)]"
             >
               <div className="p-1">
                 <Card>
