@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import NavbarContent from "./NavbarContent";
 
 interface Props {}
 
@@ -22,14 +23,7 @@ const Navbar: FC<Props> = () => {
                     <MobileMenu />
                 </div>
 
-                <ul className="hidden md:flex gap-8">
-                    <Link
-                        href={"#companies"}
-                        className="text-white hover:bg-blue-600 transition duration-300 px-2 py-1 rounded focus:outline-none focus-visible:ring-1 ring-white focus:ring-offset-2"
-                    >
-                        Companies
-                    </Link>
-                </ul>
+                <NavbarContent className="hidden md:flex" />
             </nav>
         </header>
     );
