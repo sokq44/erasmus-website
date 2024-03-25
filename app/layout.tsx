@@ -1,11 +1,9 @@
 import React from "react";
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 
 import "./globals.css";
-
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/home/footer/Footer";
 
@@ -22,7 +20,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="pl">
             <body className={inter.className} >
                 <NextTopLoader color="#00B4D8" showSpinner={false} />
                 <Navbar />

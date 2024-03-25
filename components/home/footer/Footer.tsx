@@ -12,7 +12,7 @@ interface Props {
 const Footer: FC<Props> = (props) => {
   const { children } = props;
   return (
-    <Container className="py-10 bg-[#03045E] text-white">
+    <footer className="py-10 bg-[#03045E] text-white">
       <div className="flex">
         <div className="ml-[25%]">
           <h4 className="font-bold text-lg ml-1">Organisers:</h4>
@@ -38,12 +38,12 @@ const Footer: FC<Props> = (props) => {
           </ul>
         </div>
       </div>
-      <div className="m-auto mt-10">
+      <div className="text-center mt-10">
         &copy; Copyright 2024 Zespół Szkół Elektronicznych i Licealnych w
         Warszawie
       </div>
       {children}
-    </Container>
+    </footer>
   );
 };
 
