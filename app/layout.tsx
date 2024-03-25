@@ -1,9 +1,13 @@
 import React from "react";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
 import NextTopLoader from "nextjs-toploader";
+
+import "./globals.css";
+
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/home/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +26,10 @@ export default function RootLayout({
             <body className={inter.className} >
                 <NextTopLoader color="#00B4D8" showSpinner={false} />
                 <Navbar />
-                <main className="relative container mx-auto py-24">
+                <main className="relative container mx-auto pt-24">
                     {children}
                 </main>
+                <Footer />
             </body>
         </html>
     );
