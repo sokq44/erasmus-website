@@ -42,7 +42,7 @@ export const companies: Company[] = [
       to: "to-blue-500",
     },
 
-    href: "company-2",
+    href: "microbit-servicio-tecnico",
   },
   {
     slug: "samsung-electronics",
@@ -63,7 +63,7 @@ export const companies: Company[] = [
       to: "to-amber-500",
     },
 
-    href: "company-3",
+    href: "samsung-electronics",
   },
   {
     slug: "euromind",
@@ -84,7 +84,7 @@ export const companies: Company[] = [
       to: "to-purple-500",
     },
 
-    href: "company-4",
+    href: "euromind",
   },
   {
     slug: "jc-valvuar-audio",
@@ -105,6 +105,6 @@ export const companies: Company[] = [
       to: "to-cyan-500",
     },
 
-    href: "company-5",
+    href: "jc-valvuar-audio",
   },
 ];
