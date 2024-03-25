@@ -7,24 +7,23 @@ import { motion } from "framer-motion";
 
 interface Props {}
 
-const ImageRect = ({
-    className,
-    index,
-}: {
+type ImageRectProps = {
     className: string;
     index: number;
-}) => {
+};
+
+const ImageRect = (props: ImageRectProps) => {
     return (
         <motion.div
-            className={cn("rounded-xl origin-center", className)}
+            className={cn("rounded-xl origin-center", props.className)}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 * index }}
+            transition={{ delay: 0.2 * props.index }}
         />
     );
 };
 
-const images: { className: string }[] = [
+const images: Omit<ImageRectProps, "index">[] = [
     {
         className: "bg-green-500 col-span-4",
     },

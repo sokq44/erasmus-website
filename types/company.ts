@@ -4,6 +4,8 @@ export type Company = {
     imageSrc?: string;
     description: string;
 
+    caretColor: string;
+
     href: string;
 
     address: {
