@@ -17,11 +17,11 @@ import { testimonials } from "@/assets/testimonials";
 
 const Testimonials = () => {
   return (
-    <Container shouldAnimate={false}>
+    <Container shouldAnimate={false} className="mb-20">
       <h2 id="testimonials" className="text-3xl font-semibold text-blue-950 m-auto">
         Testimonials
       </h2>
-      <Carousel className="m-auto mt-10 w-[80%]">
+      <Carousel className="m-auto pt-10 w-[80%]">
         <CarouselContent>
           {testimonials.map((testimonial, index) => (
             <CarouselItem

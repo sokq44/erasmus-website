@@ -27,7 +27,7 @@ export default function RootLayout({
                 <main className="relative container mx-auto pt-24">
                     {children}
                 </main>
-                {/* <Footer /> */}
+                <Footer />
             </body>
         </html>
     );

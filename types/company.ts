@@ -1,4 +1,5 @@
 export type Company = {
+    slug: string;
     name: string;
     imageSrc?: string;
     description: string;

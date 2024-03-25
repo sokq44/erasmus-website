@@ -2,6 +2,7 @@ import type { Company } from "@/types/company";
 
 export const companies: Company[] = [
     {
+        slug: "forja-roja",
         name: "Forja Roja",
         imageSrc: "https://via.placeholder.com/150",
         description:
@@ -21,6 +22,7 @@ export const companies: Company[] = [
         href: "forja-roja",
     },
     {
+        slug: "microbit-servicio-tecnico",
         name: "Microbit Servicio Tecnico",
         description:
             "Microbit Servicio Tecnico to firma z siedzibą w Maladze, specjalizująca się w naprawie sprzętu elektronicznego. Firma oferuje praktyki dla studentów z programu Erasmus+.",
@@ -38,8 +40,8 @@ export const companies: Company[] = [
 
         href: "company-2",
     },
-
     {
+        slug: "samsung-electronics",
         name: "Samsung Electronics",
         description:
             "Samsung Electronics to firma z siedzibą w Seulu, specjalizująca się w produkcji elektroniki. Firma oferuje praktyki dla studentów z programu Erasmus+.",
@@ -57,8 +59,8 @@ export const companies: Company[] = [
 
         href: "company-3",
     },
-
     {
+        slug: "euromind",
         name: "EuroMind",
         description:
             "EuroMind to firma z siedzibą w Maladze, specjalizująca się w organizacji praktyk zawodowych dla studentów z programu Erasmus+.",
@@ -76,8 +78,8 @@ export const companies: Company[] = [
 
         href: "company-4",
     },
-
     {
+        slug: "jc-valvuar-audio",
         name: "JC VALVUAR AUDIO",
         description:
             "JC VALVUAR AUDIO to firma z siedzibą w Maladze, specjalizująca się w produkcji wzmacniaczy gitarowych. Firma oferuje praktyki dla studentów z programu Erasmus+.",
