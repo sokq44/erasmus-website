@@ -30,7 +30,7 @@ const backgroundGradients: { from: string; to: string }[] = [
 const CompaniesWrapper = () => {
     return (
         <Container className="gap-8 z-10" id="companies">
-            <h2 className="text-3xl font-semibold text-blue-950 ">Companies</h2>
+            <h2 className="text-3xl font-semibold text-blue-950" id="companies">Companies</h2>
 
             <p className="max-w-2xl text-muted-foreground">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
