@@ -9,14 +9,16 @@ const Navbar: FC<Props> = () => {
     return (
         <header className="py-6 bg-blue-700">
             <nav className="container relative mx-auto flex justify-between items-center">
+                <Link className="sr-only text-white" href={"#malaga"}>
+                    Skip to content
+                </Link>
+
                 <Link
                     href={"/"}
-                    className="group focus-visible:ring-1 ring-white transition duration-300 focus:ring-offset-2 focus:outline-none px-4 py-2 rounded-xl"
+                    className=" text-4xl text-white font-bold px-4 py-2 rounded-xl hover:text-blue-100 transition duration-300 focus-visible:ring-1 ring-white focus:ring-offset-2 focus:outline-none"
                     tabIndex={0}
                 >
-                    <h1 className="text-4xl text-white font-bold group-hover:text-blue-100 transition">
-                        Erasmus
-                    </h1>
+                    Erasmus
                 </Link>
 
                 <div className="md:hidden">

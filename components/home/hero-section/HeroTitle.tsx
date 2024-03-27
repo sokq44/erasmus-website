@@ -4,10 +4,11 @@ import React, { FC } from "react";
 interface Props {
     children: string;
     className?: string;
+    id: string;
 }
 
 const HeroTitle: FC<Props> = (props) => {
-    const { children, className } = props;
+    const { children, className, id } = props;
 
     return (
         <h1
@@ -15,6 +16,7 @@ const HeroTitle: FC<Props> = (props) => {
                 "text-4xl text-transparent font-semibold bg-clip-text self-start bg-gradient-to-r",
                 className
             )}
+            id={id}
         >
             {children}
         </h1>

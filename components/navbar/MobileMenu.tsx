@@ -12,6 +12,7 @@ const MobileMenu: FC<Props> = () => {
             <Sheet.SheetTrigger asChild>
                 <Button size={"icon"} variant={"outline"}>
                     <Menu />
+                    <span className="sr-only">Navigation Menu</span>
                 </Button>
             </Sheet.SheetTrigger>
 
