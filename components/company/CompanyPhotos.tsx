@@ -1,103 +1,103 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 import Container from "../home/Container";
 
-import { LayoutGrid } from "./LayoutGrid";
-import type { Card } from "./LayoutGrid";
-
 import type { Company } from "@/types/company";
+import Image from "next/image";
 
 interface Props {
   company: Company;
 }
 
-const photoCards: Card[] = [
+type CompanyImage = {
+  id: number;
+  imageSrc: string;
+  name: string;
+};
+
+const images: CompanyImage[] = [
   {
     id: 1,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 2,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 3,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 4,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 5,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 6,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 7,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 8,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 9,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
   {
     id: 10,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
-  },
-  {
-    id: 11,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
-  },
-  {
-    id: 12,
-    content: <div>cos</div>,
-    className: "",
-    thumbnail: "/companies-images/forja-roja/mr-beast.png",
+    imageSrc: "/companies-images/forja-roja/mr-beast.png",
+    name: "1",
   },
 ];
 
 const CompanyPhotos: FC<Props> = (props) => {
   const { company } = props;
   return (
-    <Container className="mt-20">
+    <Container className="mt-10">
       <span className={cn("text-4xl font-bold mx-auto", company.textColor)}>
         Zdjęcia
       </span>
-      <LayoutGrid cards={photoCards}></LayoutGrid>
+      <div className="mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          {images.map((image, _) => (
+            <CompanyImage key={image.id} image={image} />
+          ))}
+        </div>
+      </div>
     </Container>
   );
 };
+
+function CompanyImage({ image }: { image: CompanyImage }) {
+  return (
+    <a href="#" className="group">
+      <div className="aspect-1 w-full overflow-hidden rounded-lg bg-gray-200">
+        <img src={image.imageSrc} className="group-hover:opacity-75" />
+      </div>
+    </a>
+  );
+}
 
 export default CompanyPhotos;

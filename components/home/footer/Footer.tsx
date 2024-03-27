@@ -27,7 +27,7 @@ const Footer: FC<Props> = (props) => {
           </ul>
         </div>
         <div className="ml-[25%]">
-          <h4 className="font-bold text-lg ml-1">Authors:</h4>
+          <span className="font-bold text-lg ml-1">Authors:</span>
           <ul>
             <FooterItem href="https://github.com/sokq44/" icon={<GithubIcon />}>
               Michał Socki
