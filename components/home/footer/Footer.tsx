@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import Container from "@/components/home/Container";
+// import Container from "@/components/home/Container";
 import FooterItem from "./FooterItem";
 
 import {GithubIcon} from "lucide-react";

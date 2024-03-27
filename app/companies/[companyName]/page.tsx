@@ -7,6 +7,7 @@ import Container from "@/components/home/Container";
 
 import { companies } from "@/assets/companies";
 import CompanyDescription from "@/components/company/CompanyDescription";
+import CompanyPhotos from "@/components/company/CompanyPhotos";
 
 interface Props {
   params: { companyName: string };
@@ -18,9 +19,10 @@ const page: FC<Props> = (props) => {
   if (!company) return notFound();
 
   return (
-    <Container>
+    <Container className="relative">
       <CompanyHeader className={company.textColor} company={company} />
       <CompanyDescription>{company.description}</CompanyDescription>
+      <CompanyPhotos company={company}></CompanyPhotos>
     </Container>
   );
 };
