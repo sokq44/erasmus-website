@@ -20,10 +20,11 @@ const HeroSection = () => {
                     className="text-muted-foreground mt-8 md:w-[66%] text-lg"
                     delay={0.05}
                 >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Earum voluptatibus ea officia illo doloribus. Sunt possimus
-                    quidem doloribus quia voluptatibus sit, veniam ex dicta
-                    nulla temporibus, praesentium, voluptates ea ad!
+                    Projekt Erasmus w Maladze był przełomowym doświadczeniem,
+                    cechującym się rozwojem zawodowym, oraz głębokim zanurzeniem
+                    w kulturze. Uczestnicy mieli okazję poznać hiszpańskie
+                    tradycje, odbyć praktyki zawodowe i rozwijać cenne
+                    umiejętności w otoczeniu pełnym życia i gościnności.
                 </GeneratedDescription>
             </div>
 

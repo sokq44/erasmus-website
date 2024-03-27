@@ -17,14 +17,14 @@ interface Props {
 
 const CompanyCard: FC<Props> = (props) => {
     const ref = React.useRef<HTMLDivElement>(null);
-    const inView = useInView(ref, { margin: "150px 0px 0px 0px", once: false });
+    const inView = useInView(ref, { margin: "150px 0px 0px 0px", once: true });
 
     return (
         <Link
             href={`/companies/${props.company.href}`}
             className={`group bg-transparent ${
                 props.index % 2 === 1 ? "lg:translate-y-16" : ""
-            } focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-4 transition duration-300 rounded-xl `}
+            } focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 transition duration-300 rounded-xl `}
         >
             <motion.div ref={ref} whileHover={{ y: -5 }}>
                 <motion.div
