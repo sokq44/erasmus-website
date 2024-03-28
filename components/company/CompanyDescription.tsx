@@ -18,13 +18,7 @@ const CompanyDescription: FC<Props> = (props) => {
 
   return (
     <Container className={cn("py-0 px-[15%]", className)}>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {children}
-      </motion.div>
+      {children}
     </Container>
   );
 };
