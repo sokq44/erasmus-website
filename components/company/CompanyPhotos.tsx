@@ -11,7 +11,6 @@ import type { Company } from "@/types/company";
 import Image from "next/image";
 import SelectedImage from "./SelectedImage";
 import * as Dialog from "../ui/dialog";
-import Link from "next/link";
 
 interface Props {
     company: Company;
@@ -22,9 +21,11 @@ const CompanyPhotos: FC<Props> = (props) => {
     const { company, filePaths } = props;
     const [selectedImageSrc, setSelectedImageSrc] = useState<string>("");
 
+    const [isPortrait, setIsPortrait] = useState(false);
+
     return (
         <Dialog.Dialog>
-            <Container>
+            <Container className="">
                 <span
                     className={cn(
                         "text-4xl font-bold mx-auto",
@@ -44,19 +45,16 @@ const CompanyPhotos: FC<Props> = (props) => {
                 </div>
 
                 {selectedImageSrc.length > 0 ? (
-                    <Dialog.DialogContent className="max-w-3xl w-full flex flex-col ">
-                        <>
-                            <SelectedImage
-                                selectedImageSrc={selectedImageSrc}
-                            />
-                            <Link
-                                className="self-end bg-blue-700 hover:bg-primary transition duration-300 text-white px-4 py-2 rounded"
-                                target="_blank"
-                                href={`${process.env.NEXT_PUBLIC_PAGE_URL}${selectedImageSrc}`}
-                            >
-                                Otwórz w nowej karcie
-                            </Link>
-                        </>
+                    <Dialog.DialogContent
+                        className={`max-w-3xl w-11/12 md:w-full flex flex-col overflow-hidden rounded-xl ${
+                            isPortrait ? "scale-100 md:scale-[0.65]" : ""
+                        }`}
+                    >
+                        <SelectedImage
+                            selectedImageSrc={selectedImageSrc}
+                            className="mt-8"
+                            setIsPortrait={setIsPortrait}
+                        />
                     </Dialog.DialogContent>
                 ) : null}
             </Container>
