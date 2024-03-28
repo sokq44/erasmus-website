@@ -1,7 +1,11 @@
 export type Company = {
+    slug: "forja-roja" | "microbit-servicio-tecnico" | "samsung-electronics" | "euromind" | "jc-valvuar-audio";
     name: string;
     imageSrc?: string;
     description: string;
+
+    textColor: string;
+    caretColor: string;
 
     href: string;
 

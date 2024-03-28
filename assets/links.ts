@@ -1,6 +1,6 @@
-import { NavbarLinkProps } from "@/components/navbar/NavbarLink";
+import { Link } from "@/types/link";
 
-export const links: NavbarLinkProps[] = [
-    { id: "companies", name: "Companies" },
-    { id: "testimonials", name: "Testimonials" },
+export const links: Link[] = [
+    { href: "#companies", name: "Companies" },
+    { href: "#testimonials", name: "Testimonials" },
 ];

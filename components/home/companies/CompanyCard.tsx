@@ -12,6 +12,7 @@ interface Props {
     backgroundGradient: {
         from: string;
         to: string;
+        ring: string; 
     };
 }
 
@@ -21,10 +22,10 @@ const CompanyCard: FC<Props> = (props) => {
 
     return (
         <Link
-            href={`/companies/${props.company.name}`}
+            href={`/companies/${props.company.href}`}
             className={`group bg-transparent ${
                 props.index % 2 === 1 ? "lg:translate-y-16" : ""
-            } focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-4 transition duration-300 rounded-xl `}
+            } focus-visible:outline-none focus-visible:ring-4 focus-visible:${props.backgroundGradient.ring} focus-visible:ring-offset-4 transition duration-300 rounded-xl `}
         >
             <motion.div ref={ref} whileHover={{ y: -5 }}>
                 <motion.div
