@@ -29,8 +29,6 @@ const page: FC<Props> = async (props) => {
   const company = companies.find((e) => e.slug === props.params.companyName);
   const filePaths = await getFilesInDirectory(company?.slug);
 
-  console.log(company?.textColor);
-
   if (!company) return notFound();
 
   return (
