@@ -10,7 +10,7 @@ const getFilesInDirectory = async (
   const p = "./public/companies-images/" + directoryPath;
 
   try {
-    const files = (await fs.promises.readdir(p)).map((item) => `/companies/${directoryPath}/${item}`);
+    const files = (await fs.promises.readdir(p)).map((item) => `/companies-images/${directoryPath}/${item}`);
     
     return files;
   } catch (err) {

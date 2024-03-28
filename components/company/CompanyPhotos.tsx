@@ -40,7 +40,7 @@ function CompanyImage({ path }: { path: string }) {
       <div className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-7">
         <Image
           alt=""
-          src="/companies-images/forja-roja/mr-beast.png"
+          src={path}
           layout="fill"
           objectFit="cover"
           className={cn(
@@ -49,7 +49,7 @@ function CompanyImage({ path }: { path: string }) {
               ? "scale-110 blur-2xl grayscale"
               : "scale-100 blur-0 grayscale-0"
           )}
-          onLoadingComplete={() => setLoading(false)}
+          onLoad={() => setLoading(false)}
         />
       </div>
     </a>
