@@ -1,12 +1,10 @@
 import React, { FC } from "react";
-
-// import Container from "@/components/home/Container";
 import FooterItem from "./FooterItem";
 
-import {GithubIcon} from "lucide-react";
+import { GithubIcon } from "lucide-react";
 
 interface Props {
-  children?: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 const Footer: FC<Props> = (props) => {
