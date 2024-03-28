@@ -13,14 +13,6 @@ interface Props {
   company: Company;
 }
 
-// const textColors =  {
-//   "forja-roja": "text-red-600",
-//   "microbit-servicio-tecnico": "text-green-600",
-//   "samsung-electronics": "text-blue-600",
-//   "euromind": "text-blue-600",
-//   "jc-valvuar-audio": "text-black",
-// }
-
 const bgColors =  {
   "forja-roja": "bg-red-600",
   "microbit-servicio-tecnico": "bg-green-600",

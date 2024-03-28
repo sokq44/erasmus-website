@@ -63,3 +63,20 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
 }
+
+.footer-item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.footer-item:hover::before {
+  width: 100%;
+
+}
