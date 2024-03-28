@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export interface NavbarLinkProps {
     isOnMobile?: boolean;
-    id: string;
+    href: string;
     name: string;
     index: number;
 }
@@ -21,7 +21,7 @@ const NavbarLink: FC<NavbarLinkProps> = (props) => {
             transition={{ duration: 0.5, delay: 0.2 * props.index }}
         >
             <Link
-                href={`#${props.id}`}
+                href={`${props.href}`}
                 className={`${
                     props.isOnMobile ? "bg-blue-500 w-full text-center" : ""
                 } text-white hover:bg-blue-600 transition duration-300 px-2 py-1 rounded focus:outline-none focus-visible:ring-1 ring-white focus:ring-offset-2`}

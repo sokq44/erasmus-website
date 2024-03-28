@@ -10,21 +10,32 @@ import CompanyDescription from "@/components/company/CompanyDescription";
 import CompanyPhotos from "@/components/company/CompanyPhotos";
 
 interface Props {
-  params: { companyName: string };
+    params: { companyName: string };
+}
+
+export async function generateMetadata(props: Props) {
+    const company = companies.find((e) => e.slug === props.params.companyName);
+
+    if (!company) return notFound();
+
+    return {
+        title: `Erasmus - ${company.name}`,
+        description: company.description,
+    };
 }
 
 const page: FC<Props> = (props) => {
-  const company = companies.find((e) => e.slug === props.params.companyName);
+    const company = companies.find((e) => e.slug === props.params.companyName);
 
-  if (!company) return notFound();
+    if (!company) return notFound();
 
-  return (
-    <Container className="relative">
-      <CompanyHeader className={company.textColor} company={company} />
-      <CompanyDescription>{company.description}</CompanyDescription>
-      <CompanyPhotos company={company}></CompanyPhotos>
-    </Container>
-  );
+    return (
+      <Container className="relative">
+        <CompanyHeader className={company.textColor} company={company} />
+        <CompanyDescription>{company.description}</CompanyDescription>
+        <CompanyPhotos company={company}></CompanyPhotos>
+      </Container>
+    );
 };
 
 export default page;
