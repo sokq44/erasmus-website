@@ -113,3 +113,4 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
     </div>
   );
 };
+

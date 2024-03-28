@@ -13,14 +13,6 @@ interface Props {
   company: Company;
 }
 
-// const textColors =  {
-//   "forja-roja": "text-red-600",
-//   "microbit-servicio-tecnico": "text-green-600",
-//   "samsung-electronics": "text-blue-600",
-//   "euromind": "text-blue-600",
-//   "jc-valvuar-audio": "text-black",
-// }
-
 const bgColors =  {
   "forja-roja": "bg-red-600",
   "microbit-servicio-tecnico": "bg-green-600",
@@ -41,7 +33,7 @@ const CompanyHeader: FC<Props> = (props) => {
   return (
     <Container
       className={cn(
-        "text-5xl text-center font-bold mx-auto capitalize pb-10 pt-1",
+        "text-5xl text-center font-bold mx-auto capitalize pb-10 pt-0",
         className
       )}
     >
