@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-
 import FooterItem from "./FooterItem";
 
 import { GithubIcon } from "lucide-react";
