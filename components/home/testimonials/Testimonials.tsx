@@ -22,7 +22,7 @@ const Testimonials = () => {
                 id="testimonials"
                 className="text-3xl font-semibold text-blue-950 m-auto"
             >
-                Testimonials
+                Świadectwa uczniów
             </h2>
             <Carousel className="m-auto pt-10 w-[80%]">
                 <CarouselContent>

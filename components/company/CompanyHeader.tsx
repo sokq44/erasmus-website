@@ -33,7 +33,7 @@ const CompanyHeader: FC<Props> = (props) => {
   return (
     <Container
       className={cn(
-        "text-5xl text-center font-bold mx-auto capitalize pb-10 pt-0",
+        "text-5xl text-center font-bold mx-auto capitalize pb-10 pt-0 ",
         className
       )}
     >

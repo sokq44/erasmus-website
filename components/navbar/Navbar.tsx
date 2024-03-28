@@ -18,7 +18,7 @@ const Navbar: FC<Props> = () => {
                     className=" text-4xl text-white font-bold px-4 py-2 rounded-xl hover:text-blue-100 transition duration-300 focus-visible:ring-1 ring-white focus:ring-offset-2 focus:outline-none"
                     tabIndex={0}
                 >
-                    Erasmus
+                    Erasmus+
                 </Link>
 
                 <div className="md:hidden">
