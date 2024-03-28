@@ -11,7 +11,6 @@ import type { Company } from "@/types/company";
 import Image from "next/image";
 import SelectedImage from "./SelectedImage";
 import * as Dialog from "../ui/dialog";
-import { Button } from "../ui/button";
 import Link from "next/link";
 
 interface Props {
