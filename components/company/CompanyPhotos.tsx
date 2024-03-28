@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -23,7 +23,7 @@ const CompanyPhotos: FC<Props> = (props) => {
       <span className={cn("text-4xl font-bold mx-auto", company.textColor)}>
         Zdjęcia
       </span>
-      <div className="mt-8 p-10 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-8 p-10 grid grid-cols-1 gap-16 gap-y-24 sm:grid-cols-2 lg:grid-cols-3">
         {filePaths.map((path, i) => (
           <CompanyImage key={i} path={path} />
         ))}
@@ -37,7 +37,7 @@ function CompanyImage({ path }: { path: string }) {
 
   return (
     <a href="#" className="group">
-      <div className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-7">
+      <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-7">
         <Image
           alt=""
           src={path}
