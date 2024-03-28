@@ -8,9 +8,9 @@ import Container from "../home/Container";
 
 import type { Company } from "@/types/company";
 
-import Image from "next/image";
 import SelectedImage from "./SelectedImage";
 import * as Dialog from "../ui/dialog";
+import CompanyImage from "./CompanyImage";
 
 interface Props {
     company: Company;
@@ -61,41 +61,5 @@ const CompanyPhotos: FC<Props> = (props) => {
         </Dialog.Dialog>
     );
 };
-
-function CompanyImage({
-    path,
-    setSelectedImageSrc,
-}: {
-    path: string;
-    setSelectedImageSrc: React.Dispatch<React.SetStateAction<string>>;
-}) {
-    const [isLoading, setLoading] = useState(true);
-
-    const handleClick = () => {
-        setSelectedImageSrc(path);
-    };
-
-    return (
-        <Dialog.DialogTrigger asChild>
-            <div className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-7 group relative">
-                <Image
-                    alt="Zdjęcie opisujące praktyki"
-                    src={path}
-                    layout="fill"
-                    objectFit="cover"
-                    className={cn(
-                        "duration-700 ease-in-out group-hover:opacity-75 cursor-pointer",
-                        isLoading
-                            ? "scale-110 blur-2xl grayscale"
-                            : "scale-100 blur-0 grayscale-0"
-                    )}
-                    onLoad={() => setLoading(false)}
-                    onClick={handleClick}
-                    aria-description="Zdjęcie opisujące praktyki - po kliknięciu otwiera się w oknie dialogowym"
-                />
-            </div>
-        </Dialog.DialogTrigger>
-    );
-}
 
 export default CompanyPhotos;
