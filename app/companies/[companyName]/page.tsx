@@ -11,7 +11,18 @@ import CompanyPhotos from "@/components/company/CompanyPhotos";
 import { getFilesInDirectory } from "@/assets/get-images";
 
 interface Props {
-  params: { companyName: string };
+    params: { companyName: string };
+}
+
+export async function generateMetadata(props: Props) {
+    const company = companies.find((e) => e.slug === props.params.companyName);
+
+    if (!company) return notFound();
+
+    return {
+        title: `Erasmus - ${company.name}`,
+        description: company.description,
+    };
 }
 
 const page: FC<Props> = async (props) => {
