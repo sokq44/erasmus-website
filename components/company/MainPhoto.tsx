@@ -2,34 +2,32 @@
 
 import React, { FC, useState } from "react";
 
-import Image from "next/image";
-
-import { motion } from "framer-motion";
+import Img from "next/image";
+import { Image } from "@/types/image";
 
 interface Props {
-  img: { id: number; src: string };
+    img: Image;
 }
 
 const MainPhoto: FC<Props> = (props) => {
-  const { id, src } = props.img;
+    const { id, src } = props.img;
 
-  const [ loaded, setLoaded ] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
-  return (
-    <div
-      className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg scale-75">
-      <Image
-        id={id.toString()}
-        alt="Zaznaczone zdjęcie opisujące praktyki"
-        src={src}
-        layout="fill"
-        objectFit="cover"
-        className={loaded ? "blur-none" : "blur-xl"}
-        aria-description="Zaznaczone zdjęcie opisujące praktyki - po kliknięciu otwiera się w oknie dialogowym"
-        onLoad={() => setLoaded(true)}
-      />
-    </div>
-  );
+    return (
+        <div className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg scale-75">
+            <Img
+                id={id.toString()}
+                alt="Zaznaczone zdjęcie opisujące praktyki"
+                src={src}
+                layout="fill"
+                objectFit="cover"
+                className={loaded ? "blur-none" : "blur-xl"}
+                aria-description="Zaznaczone zdjęcie opisujące praktyki - po kliknięciu otwiera się w oknie dialogowym"
+                onLoad={() => setLoaded(true)}
+            />
+        </div>
+    );
 };
 
 export default MainPhoto;

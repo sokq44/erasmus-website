@@ -24,7 +24,7 @@ export default function RootLayout({
             <body className={inter.className}>
                 <NextTopLoader color="#00B4D8" showSpinner={false} />
                 <Navbar />
-                <main className="relative container mx-auto pt-24">
+                <main className="relative container mx-auto pt-24 flex flex-col gap-16">
                     {children}
                 </main>
                 <Footer />
