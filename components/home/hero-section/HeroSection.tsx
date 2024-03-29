@@ -14,7 +14,7 @@ const HeroSection = () => {
                     className="from-[#03045E] to-[#0077B6] py-1"
                     id="malaga"
                 >
-                    Malaga Erasmus Program
+                    Malaga Erasmus+ Program
                 </HeroTitle>
                 <GeneratedDescription
                     className="text-muted-foreground mt-8 md:w-[66%] text-lg"
@@ -27,9 +27,6 @@ const HeroSection = () => {
                     umiejętności w otoczeniu pełnym życia i gościnności.
                 </GeneratedDescription>
             </div>
-
-            {/* <Blob className="-translate-y-20 translate-x-[150%] -z-10 w-[35%] absolute" /> */}
-
             <ImagesGrid />
         </Container>
     );
