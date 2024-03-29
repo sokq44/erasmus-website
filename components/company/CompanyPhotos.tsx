@@ -9,32 +9,33 @@ import { motion } from "framer-motion";
 import Container from "../home/Container";
 import MainPhoto from "./MainPhoto";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
 } from "@/components/ui/carousel";
 import SecondaryPhoto from "./SecondaryPhoto";
+import { Image } from "@/types/image";
 
 interface Props {
-  company: Company;
-  filePaths: string[];
+    company: Company;
+    filePaths: string[];
 }
 
 const CompanyPhotos: FC<Props> = ({ filePaths }) => {
-  const [selectedImageId, setSelectedImageId] = useState(0);
-  const [images, setImages] = useState<{ id: number; src: string }[]>([]);
+    const [selectedImageId, setSelectedImageId] = useState(0);
+    const [images, setImages] = useState<Image[]>([]);
 
-  useEffect(() => {
-    const data = [];
+    useEffect(() => {
+        const data: Image[] = [];
 
-    for (let i = 0; i < filePaths.length; i++) {
-      data[i] = { id: i, src: filePaths[i] };
-    }
+        filePaths.forEach((path, index) => {
+            data.push({ id: index, src: path });
+        });
 
-    setImages(data);
-  }, []);
+        setImages(data);
+    }, []);
 
   return (
     <Container className="mt-40">

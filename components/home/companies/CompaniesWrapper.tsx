@@ -4,31 +4,31 @@ import { companies } from "@/assets/companies";
 import CompanyCard from "./CompanyCard";
 import Container from "@/components/home/Container";
 
-const backgroundGradients: { from: string; to: string, ring: string }[] = [
+const backgroundGradients: { from: string; to: string; ring: string }[] = [
     {
         from: "from-red-500",
         to: "to-orange-500",
-        ring: "ring-orange-500"
+        ring: "focus-visible:ring-red-500",
     },
     {
         from: "from-green-500",
         to: "to-blue-500",
-        ring: "ring-blue-500"
+        ring: "focus-visible:ring-green-500",
     },
     {
         from: "from-yellow-500",
         to: "to-amber-500",
-        ring: "ring-amber-500"
+        ring: "focus-visible:ring-yellow-500",
     },
     {
         from: "from-pink-500",
         to: "to-purple-500",
-        ring: "ring-purple-500"
+        ring: "focus-visible:ring-pink-500",
     },
     {
         from: "from-teal-500",
         to: "to-cyan-500",
-        ring: "ring-cyan-500"
+        ring: "focus-visible:ring-teal-500",
     },
 ];
 
