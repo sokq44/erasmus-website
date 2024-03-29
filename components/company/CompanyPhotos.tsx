@@ -42,7 +42,7 @@ const CompanyPhotos: FC<Props> = (props) => {
     }, []);
 
   return (
-    <Container className="mt-40">
+    <Container className="mt-16">
       <span className={cn("text-4xl font-bold mx-auto ", company.textColor)}>Zdjęcia</span>
       {images.length > 0 && <MainPhoto img={images[selectedImageId]} />}
       <Carousel className="mx-auto w-[80%]">
