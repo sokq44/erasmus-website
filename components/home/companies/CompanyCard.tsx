@@ -3,7 +3,6 @@
 import * as Card from "@/components/ui/card";
 import { Company } from "@/types/company";
 import Link from "next/link";
-import Image from "next/image";
 import React, { FC } from "react";
 import { motion, useInView } from "framer-motion";
 
