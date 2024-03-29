@@ -2,6 +2,8 @@
 
 import React, { FC, useEffect, useState } from "react";
 
+import { cn } from "@/lib/utils";
+
 import type { Company } from "@/types/company";
 
 import { motion } from "framer-motion";
@@ -23,7 +25,9 @@ interface Props {
     filePaths: string[];
 }
 
-const CompanyPhotos: FC<Props> = ({ filePaths }) => {
+const CompanyPhotos: FC<Props> = (props) => {
+  const { company, filePaths } = props;
+
     const [selectedImageId, setSelectedImageId] = useState(0);
     const [images, setImages] = useState<Image[]>([]);
 
@@ -39,7 +43,7 @@ const CompanyPhotos: FC<Props> = ({ filePaths }) => {
 
   return (
     <Container className="mt-40">
-      <span className="text-4xl font-bold mx-auto">Zdjęcia</span>
+      <span className={cn("text-4xl font-bold mx-auto ", company.textColor)}>Zdjęcia</span>
       {images.length > 0 && <MainPhoto img={images[selectedImageId]} />}
       <Carousel className="mx-auto w-[80%]">
         <CarouselContent>

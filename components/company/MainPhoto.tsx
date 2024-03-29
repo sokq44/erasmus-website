@@ -2,9 +2,9 @@
 
 import React, { FC, useState } from "react";
 
-import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface Props {
   img: { id: number; src: string };
@@ -17,7 +17,7 @@ const MainPhoto: FC<Props> = (props) => {
 
   return (
     <div
-      className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg scale-75">
+      className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg scale-75 drop-shadow-[2px_2px_2px_rgba(108,122,137,1)]">
       <Image
         id={id.toString()}
         alt="Zaznaczone zdjęcie opisujące praktyki"
