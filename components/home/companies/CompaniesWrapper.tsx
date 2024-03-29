@@ -11,24 +11,24 @@ const backgroundGradients: { from: string; to: string; ring: string }[] = [
         ring: "focus-visible:ring-red-500",
     },
     {
-        from: "from-green-500",
-        to: "to-blue-500",
+        from: "from-orange-500",
+        to: "to-orange-300",
+        ring: "focus-visible:ring-orange-500",
+    },
+    {
+        from: "from-green-700",
+        to: "to-green-500",
         ring: "focus-visible:ring-green-500",
     },
     {
-        from: "from-yellow-500",
-        to: "to-amber-500",
-        ring: "focus-visible:ring-yellow-500",
+        from: "from-blue-700",
+        to: "to-blue-500",
+        ring: "focus-visible:ring-blue-700",
     },
     {
-        from: "from-pink-500",
-        to: "to-purple-500",
-        ring: "focus-visible:ring-pink-500",
-    },
-    {
-        from: "from-teal-500",
-        to: "to-cyan-500",
-        ring: "focus-visible:ring-teal-500",
+        from: "from-black",
+        to: "to-gray-600",
+        ring: "focus-visible:ring-black",
     },
 ];
 
