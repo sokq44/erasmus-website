@@ -67,7 +67,7 @@ export const companies: Company[] = [
   },
   {
     slug: "euromind",
-    name: "EuroMind",
+    name: "idevelop",
     description:
       "EuroMind to firma z siedzibą w Maladze, specjalizująca się w organizacji praktyk zawodowych dla studentów z programu Erasmus+.",
     caretColor: "bg-blue-600",

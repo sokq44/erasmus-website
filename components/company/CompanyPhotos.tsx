@@ -1,16 +1,24 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
-import Container from "../home/Container";
-
 import type { Company } from "@/types/company";
 
-import Image from "next/image";
-import SelectedImage from "./SelectedImage";
-import * as Dialog from "../ui/dialog";
+import { motion } from "framer-motion";
+
+import Container from "../home/Container";
+import MainPhoto from "./MainPhoto";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
+import SecondaryPhoto from "./SecondaryPhoto";
+import { Image } from "@/types/image";
 
 interface Props {
     company: Company;
@@ -18,84 +26,52 @@ interface Props {
 }
 
 const CompanyPhotos: FC<Props> = (props) => {
-    const { company, filePaths } = props;
-    const [selectedImageSrc, setSelectedImageSrc] = useState<string>("");
+  const { company, filePaths } = props;
 
-    const [isPortrait, setIsPortrait] = useState(false);
+    const [selectedImageId, setSelectedImageId] = useState(0);
+    const [images, setImages] = useState<Image[]>([]);
 
-    return (
-        <Dialog.Dialog>
-            <Container className="">
-                <span
-                    className={cn(
-                        "text-4xl font-bold mx-auto",
-                        company.textColor
-                    )}
-                >
-                    Zdjęcia
-                </span>
-                <div className="mt-8 p-10 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3">
-                    {filePaths.map((path, i) => (
-                        <CompanyImage
-                            key={i}
-                            path={path}
-                            setSelectedImageSrc={setSelectedImageSrc}
-                        />
-                    ))}
-                </div>
+    useEffect(() => {
+        const data: Image[] = [];
 
-                {selectedImageSrc.length > 0 ? (
-                    <Dialog.DialogContent
-                        className={`max-w-3xl w-11/12 md:w-full flex flex-col overflow-hidden rounded-xl ${
-                            isPortrait ? "scale-100 md:scale-[0.65]" : ""
-                        }`}
-                    >
-                        <SelectedImage
-                            selectedImageSrc={selectedImageSrc}
-                            className="mt-8"
-                            setIsPortrait={setIsPortrait}
-                        />
-                    </Dialog.DialogContent>
-                ) : null}
-            </Container>
-        </Dialog.Dialog>
-    );
+        filePaths.forEach((path, index) => {
+            data.push({ id: index, src: path });
+        });
+
+        setImages(data);
+    }, []);
+
+  return (
+    <Container className="mt-16">
+      <span className={cn("text-4xl font-bold mx-auto ", company.textColor)}>Zdjęcia</span>
+      {images.length > 0 && <MainPhoto img={images[selectedImageId]} />}
+      <Carousel className="mx-auto w-[80%]">
+        <CarouselContent>
+          {images.map((image) => (
+            <CarouselItem
+              key={`photo-${image.id}`}
+              className="basis-1/2 md:basis-1/5 sm:basis-1/3"
+              onClick={() => setSelectedImageId(image.id)}
+            >
+              <motion.div
+                className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 group relative"
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+              >
+                <SecondaryPhoto id={image.id} path={image.src} />
+              </motion.div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselNext />
+        <CarouselPrevious />
+      </Carousel>
+    </Container>
+  );
 };
-
-function CompanyImage({
-    path,
-    setSelectedImageSrc,
-}: {
-    path: string;
-    setSelectedImageSrc: React.Dispatch<React.SetStateAction<string>>;
-}) {
-    const [isLoading, setLoading] = useState(true);
-
-    const handleClick = () => {
-        setSelectedImageSrc(path);
-    };
-
-    return (
-        <Dialog.DialogTrigger asChild>
-            <div className="aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-7 group relative">
-                <Image
-                    alt="Zdjęcie opisujące praktyki"
-                    src={path}
-                    layout="fill"
-                    objectFit="cover"
-                    className={cn(
-                        "duration-700 ease-in-out group-hover:opacity-75 cursor-pointer",
-                        isLoading
-                            ? "scale-110 blur-2xl grayscale"
-                            : "scale-100 blur-0 grayscale-0"
-                    )}
-                    onLoad={() => setLoading(false)}
-                    onClick={handleClick}
-                    aria-description="Zdjęcie opisujące praktyki - po kliknięciu otwiera się w oknie dialogowym"
-                />
-            </div>
-        </Dialog.DialogTrigger>
-    );
-}
 
 export default CompanyPhotos;
