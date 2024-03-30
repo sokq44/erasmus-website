@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
@@ -35,9 +41,15 @@ const Testimonials = () => {
                                 <Card>
                                     <CardHeader>
                                         <div className="flex items-stretch">
-                                            <span className="text-3xl font-semibold">
-                                                {testimonial.name}
-                                            </span>
+                                            <div>
+                                                <CardTitle className="text-3xl font-semibold">
+                                                    {testimonial.name}
+                                                </CardTitle>
+                                                <CardDescription className="mt-1">
+                                                    Technik{" "}
+                                                    {testimonial.profile}
+                                                </CardDescription>
+                                            </div>
                                             <Avatar className="ml-auto size-[30%] drop-shadow-[1px_1px_1px_rgba(0,180,216,1)]">
                                                 <AvatarImage
                                                     src={testimonial.img}
