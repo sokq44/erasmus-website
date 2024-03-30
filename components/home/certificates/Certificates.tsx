@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Container from "@/components/home/Container";
-import Image from "next/image";
+import CertificatesImage from "./CertificatesImage";
 
 interface Props {}
 
@@ -15,7 +15,7 @@ const Certificates: FC<Props> = () => {
                     className="text-3xl font-semibold text-blue-950"
                     id="companies"
                 >
-                    Certyfikaty
+                    Certyfikaty dla uczestników
                 </h2>
 
                 <p className="max-w-2xl text-muted-foreground mt-16">
@@ -27,13 +27,7 @@ const Certificates: FC<Props> = () => {
                 </p>
             </div>
 
-            <Image
-                src={"/companies-images/euromind/mr-beast.png"}
-                alt="Zdjęcie przedstawiające uczniów z certyfikatami"
-                width={500}
-                height={500}
-                className="rounded-xl"
-            />
+            <CertificatesImage />
         </Container>
     );
 };
