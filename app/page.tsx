@@ -5,6 +5,7 @@ import React from "react";
 import CompaniesWrapper from "@/components/home/companies/CompaniesWrapper";
 import HeroSection from "@/components/home/hero-section/HeroSection";
 import Testimonials from "@/components/home/testimonials/Testimonials";
+import Certificates from "@/components/home/certificates/Certificates";
 
 ("text-red-600");
 ("text-green-600");
@@ -17,6 +18,7 @@ export default function Home() {
         <>
             <HeroSection />
             <CompaniesWrapper />
+            <Certificates />
             <Testimonials />
         </>
     );

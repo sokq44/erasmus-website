@@ -17,11 +17,15 @@ const Container: FC<Props> = (props) => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.15 }}
+            id={`${props.id}`}
         >
             {props.children}
         </motion.section>
     ) : (
-        <section className={cn("py-20 flex flex-col", props.className)}>
+        <section
+            className={cn("py-20 flex flex-col", props.className)}
+            id={`${props.id}`}
+        >
             {props.children}
         </section>
     );
