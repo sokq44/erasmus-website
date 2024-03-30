@@ -1,7 +1,7 @@
 import { Link } from "@/types/link";
 
 export const links: Link[] = [
-    { href: "#companies", name: "Companies" },
-    { href: "#certificates", name: "Certificates" },
-    { href: "#testimonials", name: "Testimonials" },
+    { href: "#companies", name: "Firmy" },
+    { href: "#certificates", name: "Certyfikaty" },
+    { href: "#testimonials", name: "Świadectwa" },
 ];
