@@ -15,7 +15,7 @@ const Certificates: FC<Props> = () => {
                     className="text-3xl font-semibold text-blue-950"
                     id="companies"
                 >
-                    Certificates
+                    Certyfikaty
                 </h2>
 
                 <p className="max-w-2xl text-muted-foreground mt-16">
