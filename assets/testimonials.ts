@@ -29,4 +29,18 @@ export const testimonials: Testimonial[] = [
     testimonial:
       '"Na praktykach poznałem nowe zagadnienia, które zgadzają się z moimi zainteresowaniami zawodowymi, oraz spotkałem świetnych pracodawców, którzy oświecili mi te kwestie."',
   },
+  {
+    name: "Jakub",
+    img: "/testimonials/e-w.jpg",
+    profile: "Informatyk",
+    testimonial:
+      '"Jako osoba po praktykach w serwisie uważam, że Telemalaga Samsung to perfekcyjna możliwość do doszlifowania swoich umiejętności. Wiele dała mi praktyka w obcym kraju pod względem doświadczenia oraz doskonalenia języka"',
+  },
+  {
+    name: "Wiktoria",
+    img: "/testimonials/e-w.jpg",
+    profile: "Programista",
+    testimonial:
+      '""',
+  },
 ];
