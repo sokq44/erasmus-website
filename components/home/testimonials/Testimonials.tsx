@@ -20,7 +20,7 @@ const Testimonials = () => {
     <Container shouldAnimate={false} className="mb-20">
       <h2
         id="testimonials"
-        className="text-3xl font-semibold text-blue-950 m-auto"
+        className="text-3xl font-semibold text-blue-950 mx-auto"
       >
         Świadectwa uczestników
       </h2>
