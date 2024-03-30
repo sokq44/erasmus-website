@@ -2,53 +2,18 @@ import type { Testimonial } from "@/types/testimonial";
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
+    name: "Stasiek",
+    img: "/testimonials/s-g.jpg",
+    testimonial: "\"Udało mi się Zdobyć cenne doświadczenie zawodowe. Bardzo mi się również podobał fakt rozwijania wiedzy w innym kraju.\"",
   },
   {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
+    name: "Maks",
+    img: "/testimonials/m-m.jpg",
+    testimonial: "\"Uważam że Erasmus to świetna okazja do zdobycia cennego dośwaidczenia zawodowego i poznania wielu wartościowych ludzi.\"",
   },
   {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
-  },
-  {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
-  },
-  {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
-  },
-  {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
-  },
-  {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
-  },
-  {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
-  },
-  {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
-  },
-  {
-    name: "Name",
-    img: "https://github.com/shadcn.png",
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere tempore a quidem aperiam impedit nihil quasi odit animi porro distinctio deserunt deleniti totam, fugiat dolorem incidunt saepe dolorum blanditiis!",
+    name: "Wojtek",
+    img: "/testimonials/w-a.jpg",
+    testimonial: "\"W porównaniu do polskich praktyk, te hiszpańskie okazały się o wiele cenniejsze w doświadczenia techniczne jak i te językowe.\"",
   },
 ];

@@ -17,9 +17,12 @@ import { testimonials } from "@/assets/testimonials";
 
 const Testimonials = () => {
     return (
-        <Container shouldAnimate={false} className="mb-20" id="testimonials">
-            <h2 className="text-3xl font-semibold text-blue-950 m-auto">
-                Testimonials
+        <Container shouldAnimate={false} className="mb-20">
+            <h2
+                id="testimonials"
+                className="text-3xl font-semibold text-blue-950 mx-auto text-center"
+            >
+                Świadectwa uczestników
             </h2>
             <Carousel className="m-auto pt-10 w-[80%]">
                 <CarouselContent>
@@ -35,7 +38,7 @@ const Testimonials = () => {
                                             <span className="text-3xl font-semibold">
                                                 {testimonial.name}
                                             </span>
-                                            <Avatar className="ml-auto size-[30%]">
+                                            <Avatar className="ml-auto size-[30%] drop-shadow-[1px_1px_1px_rgba(0,180,216,1)]">
                                                 <AvatarImage
                                                     src={testimonial.img}
                                                     alt="Some random desc"

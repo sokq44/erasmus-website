@@ -4,7 +4,8 @@ export const companies: Company[] = [
   {
     slug: "forja-roja",
     name: "Forja Roja",
-    imageSrc: "https://via.placeholder.com/150",
+    imageSrc: "/companies-logos/forja-roja.png",
+    imageScale: "scale-75",
     description:
       "Forja Roja to firma z siedzibą w Maladze, specjalizująca się w tworzeniu gier wideo i modelowaniu 3D. Forja Roja oferuje praktyki dla studentów z całej Europy.",
     textColor: "text-red-600",
@@ -24,8 +25,33 @@ export const companies: Company[] = [
     href: "forja-roja",
   },
   {
+    slug: "euromind",
+    name: "idevelop",
+    imageSrc: "/companies-logos/idevelop.png",
+    imageScale: "scale-25",
+    description:
+      "Idevelop to firma z siedzibą w Maladze, specjalizująca się w organizacji praktyk zawodowych dla studentów z programu Erasmus+.",
+    caretColor: "bg-blue-600",
+    textColor: "text-orange-600",
+    address: {
+      country: "Country 4",
+      city: "City 4",
+      street: "Street 4",
+      number: "4",
+    },
+
+    backgroundGradient: {
+      from: "from-pink-500",
+      to: "to-purple-500",
+    },
+
+    href: "euromind",
+  },
+  {
     slug: "microbit-servicio-tecnico",
     name: "Microbit Servicio Tecnico",
+    imageSrc: "/companies-logos/microbit.jpg",
+    imageScale: "scale-x-100 scale-y-100",
     description:
       "Microbit Servicio Tecnico to firma z siedzibą w Maladze, specjalizująca się w naprawie sprzętu elektronicznego. Firma oferuje praktyki dla studentów z programu Erasmus+.",
     textColor: "text-green-600",
@@ -47,6 +73,8 @@ export const companies: Company[] = [
   {
     slug: "samsung-electronics",
     name: "Samsung Electronics",
+    imageSrc: "/companies-logos/samsung-electronics.png",
+    imageScale: "scale-x-100 scale-y-100",
     description:
       "Samsung Electronics to firma z siedzibą w Seulu, specjalizująca się w produkcji elektroniki. Firma oferuje praktyki dla studentów z programu Erasmus+.",
     textColor: "text-blue-600",
@@ -59,36 +87,17 @@ export const companies: Company[] = [
     },
 
     backgroundGradient: {
-      from: "from-yellow-500",
-      to: "to-amber-500",
+      from: "from-blue-300",
+      to: "to-blue-500",
     },
 
     href: "samsung-electronics",
   },
   {
-    slug: "euromind",
-    name: "EuroMind",
-    description:
-      "EuroMind to firma z siedzibą w Maladze, specjalizująca się w organizacji praktyk zawodowych dla studentów z programu Erasmus+.",
-    caretColor: "bg-blue-600",
-    textColor: "text-blue-600",
-    address: {
-      country: "Country 4",
-      city: "City 4",
-      street: "Street 4",
-      number: "4",
-    },
-
-    backgroundGradient: {
-      from: "from-pink-500",
-      to: "to-purple-500",
-    },
-
-    href: "euromind",
-  },
-  {
     slug: "jc-valvuar-audio",
     name: "JC VALVUAR AUDIO",
+    imageSrc: "/companies-logos/jc-valvuar-audio.png",
+    imageScale: "scale-x-100 scale-y-100",
     description:
       "JC VALVUAR AUDIO to firma z siedzibą w Maladze, specjalizująca się w produkcji wzmacniaczy gitarowych. Firma oferuje praktyki dla studentów z programu Erasmus+.",
     textColor: "text-black",

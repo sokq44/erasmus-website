@@ -10,7 +10,7 @@ import Certificates from "@/components/home/certificates/Certificates";
 ("text-red-600");
 ("text-green-600");
 ("text-blue-600");
-("text-blue-600");
+("text-orange-600");
 ("text-black");
 
 export default function Home() {

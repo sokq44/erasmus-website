@@ -2,13 +2,13 @@ import React, { FC } from "react";
 
 import { notFound } from "next/navigation";
 
-import CompanyHeader from "@/components/company/CompanyHeader";
+import CompanyHeader from "@/components/company/CompanyHeader/CompanyHeader";
 import Container from "@/components/home/Container";
 
 import { companies } from "@/assets/companies";
-import CompanyDescription from "@/components/company/CompanyDescription";
-import CompanyPhotos from "@/components/company/CompanyPhotos"; 
+import CompanyPhotos from "@/components/company/CompanyPhotos/CompanyPhotos"; 
 import { getFilesInDirectory } from "@/assets/get-images";
+import CompanyLogo from "@/components/company/CompanyLogo";
 
 interface Props {
     params: { companyName: string };
@@ -34,7 +34,7 @@ const page: FC<Props> = async (props) => {
   return (
     <Container className="relative">
       <CompanyHeader className={company.textColor} company={company} />
-      <CompanyDescription>{company.description}</CompanyDescription>
+      <CompanyLogo company={company}/>
       <CompanyPhotos company={company} filePaths={filePaths} ></CompanyPhotos>
     </Container>
   );

@@ -2,51 +2,57 @@
 
 import React, { FC, useEffect, useState } from "react";
 
+import { cn } from "@/lib/utils";
+
 import type { Company } from "@/types/company";
 
 import { motion } from "framer-motion";
 
-import Container from "../home/Container";
+import Container from "../../home/Container";
 import MainPhoto from "./MainPhoto";
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import SecondaryPhoto from "./SecondaryPhoto";
 import { Image } from "@/types/image";
 
 interface Props {
-    company: Company;
-    filePaths: string[];
+  company: Company;
+  filePaths: string[];
 }
 
-const CompanyPhotos: FC<Props> = ({ filePaths }) => {
-    const [selectedImageId, setSelectedImageId] = useState(0);
-    const [images, setImages] = useState<Image[]>([]);
+const CompanyPhotos: FC<Props> = (props) => {
+  const { company, filePaths } = props;
 
-    useEffect(() => {
-        const data: Image[] = [];
+  const [selectedImageId, setSelectedImageId] = useState(0);
+  const [images, setImages] = useState<Image[]>([]);
 
-        filePaths.forEach((path, index) => {
-            data.push({ id: index, src: path });
-        });
+  useEffect(() => {
+    const data: Image[] = [];
 
-        setImages(data);
-    }, []);
+    filePaths.forEach((path, index) => {
+      data.push({ id: index, src: path });
+    });
+
+    setImages(data);
+  }, []);
 
   return (
-    <Container className="mt-40">
-      <span className="text-4xl font-bold mx-auto">Zdjęcia</span>
+    <Container className="mt-20">
+      <span className={cn("text-4xl font-bold mx-auto ", company.textColor)}>
+        Zdjęcia
+      </span>
       {images.length > 0 && <MainPhoto img={images[selectedImageId]} />}
       <Carousel className="mx-auto w-[80%]">
         <CarouselContent>
           {images.map((image) => (
             <CarouselItem
               key={`photo-${image.id}`}
-              className="basis-1/2 md:basis-1/5 sm:basis-1/3"
+              className="basis-1/2 md:basis-1/5 sm:basis-1/2"
               onClick={() => setSelectedImageId(image.id)}
             >
               <motion.div
@@ -63,8 +69,12 @@ const CompanyPhotos: FC<Props> = ({ filePaths }) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselNext />
-        <CarouselPrevious />
+        <CarouselNext
+          renderNextImage={() => setSelectedImageId(selectedImageId + 1)}
+        />
+        <CarouselPrevious
+          renderNextImage={() => setSelectedImageId(selectedImageId - 1)}
+        />
       </Carousel>
     </Container>
   );
