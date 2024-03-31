@@ -1,5 +1,3 @@
-"use server";
-
 import fs from "fs";
 
 const getFilesInDirectory = async (
