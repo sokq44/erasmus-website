@@ -1,20 +1,19 @@
-"use server";
-
 import fs from "fs";
 
 const getFilesInDirectory = async (
   directoryPath: string | undefined
 ): Promise<string[]> => {
-  if (!directoryPath) return [];
-
-  const p = "./public/companies-images/" + directoryPath;
-
   try {
-    const files = (await fs.promises.readdir(p)).map((item) => `/companies-images/${directoryPath}/${item}`);
-    
-    return files;
-  } catch (err) {
-    throw err;
+    if (!directoryPath) return [];
+
+    const p = "./public/companies-images/" + directoryPath;
+
+    const files = await fs.promises.readdir(p);
+
+    return files.map((item) => `/companies-images/${directoryPath}/${item}`);
+  } catch (error) {
+    console.error("Error fetching files from directory:", error);
+    return [];
   }
 };
 

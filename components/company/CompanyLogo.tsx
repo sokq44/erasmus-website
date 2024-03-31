@@ -9,10 +9,10 @@ interface Props {
 }
 
 const scales = {
-    "forja-roja": "scale-75",
+    "forja-roja": "scale-75 my-20",
     "euromind": "scale-50",
-    "jc-valvuar-audio": "scale-100",
-    "microbit-servicio-tecnico": "scale-100",
+    "jc-valvuar-audio": "scale-100 my-20",
+    "microbit-servicio-tecnico": "scale-100 my-20",
     "samsung-electronics": "scale-75",
 }
 
@@ -22,7 +22,7 @@ const CompanyLogo: FC<Props> = (props) => {
   return (
     <Container className="mt-20 mb-0">
       <Image
-        className={cn("mx-auto rounded-xl ", scales[company.slug])}
+        className={cn("mx-auto rounded-xl", scales[company.slug])}
         src={company.imageSrc}
         alt="Logo firmy"
         width={500}
