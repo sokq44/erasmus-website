@@ -12,8 +12,7 @@ const getFilesInDirectory = async (
 
     return files.map((item) => `/companies-images/${directoryPath}/${item}`);
   } catch (error) {
-    console.error("Error fetching files from directory:", error);
-    return [];
+    return ["Error fetching data!"];
   }
 };
 
