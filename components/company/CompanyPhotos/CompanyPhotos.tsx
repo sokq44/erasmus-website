@@ -28,6 +28,8 @@ interface Props {
 const CompanyPhotos: FC<Props> = (props) => {
   const { company, filePaths } = props;
 
+  console.log(filePaths);
+
   const [selectedImageId, setSelectedImageId] = useState(0);
   const [images, setImages] = useState<Image[]>([]);
 
