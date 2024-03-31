@@ -12,6 +12,8 @@ const getFilesInDirectory = async (
 
     const files = await fs.promises.readdir(p);
 
+    console.log(files.map((item) => `${process.env.NEXT_PUBLIC_PAGE_URL}/companies-images/${directoryPath}/${item}`));
+
     return files.map((item) => `/companies-images/${directoryPath}/${item}`);
   } catch (error) {
     console.error("Error fetching files from directory:", error);
