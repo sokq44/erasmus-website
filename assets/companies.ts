@@ -26,7 +26,7 @@ export const companies: Company[] = [
   },
   {
     slug: "euromind",
-    name: "idevelop",
+    name: "iDevelop",
     imageSrc: "/companies-logos/idevelop.png",
     imageScale: "scale-25",
     description:
