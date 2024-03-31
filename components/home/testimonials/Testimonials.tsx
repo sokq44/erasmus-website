@@ -1,25 +1,16 @@
 import React from "react";
 
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
-import {
     Carousel,
     CarouselContent,
-    CarouselItem,
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 import Container from "@/components/home/Container";
 
 import { testimonials } from "@/assets/testimonials";
+import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {
     return (
@@ -28,47 +19,24 @@ const Testimonials = () => {
                 id="testimonials"
                 className="text-3xl font-semibold text-blue-950 mx-auto text-center"
             >
-                Świadectwa uczestników
+                Świadectwa uczniów
             </h2>
-            <Carousel className="m-auto pt-10 w-[80%]">
+
+            <p className="max-w-2xl text-muted-foreground mx-auto text-left md:text-center mt-16">
+                Przeczytaj, co uczestnicy projektu mają do powiedzenia o swoich
+                doświadczeniach w Maladze! To więcej niż tylko słowa - to
+                prawdziwe historie o odwadze, odkryciach i rozwoju osobistym.
+                Poznaj ich perspektywę na niezapomniane chwile spędzone za
+                granicą i zobacz, jakie korzyści przyniosły im praktyki!
+            </p>
+
+            <Carousel className="m-auto mt-24 w-[80%]">
                 <CarouselContent>
                     {testimonials.map((testimonial, index) => (
-                        <CarouselItem
+                        <TestimonialCard
                             key={index}
-                            className="lg:basis-1/3 md:basis-1/2 drop-shadow-[1px_1px_1px_rgba(0,180,216,1)]"
-                        >
-                            <div className="p-1">
-                                <Card>
-                                    <CardHeader>
-                                        <div className="flex items-stretch">
-                                            <div>
-                                                <CardTitle className="text-3xl font-semibold">
-                                                    {testimonial.name}
-                                                </CardTitle>
-                                                <CardDescription className="mt-1">
-                                                    Technik{" "}
-                                                    {testimonial.profile}
-                                                </CardDescription>
-                                            </div>
-                                            <Avatar className="ml-auto size-[30%] drop-shadow-[1px_1px_1px_rgba(0,180,216,1)]">
-                                                <AvatarImage
-                                                    src={testimonial.img}
-                                                    alt="Some random desc"
-                                                />
-                                                <AvatarFallback>
-                                                    U
-                                                </AvatarFallback>
-                                            </Avatar>
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent className="flex items-center">
-                                        <span className="text-1xl">
-                                            {testimonial.testimonial}
-                                        </span>
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </CarouselItem>
+                            testimonial={testimonial}
+                        />
                     ))}
                 </CarouselContent>
                 <CarouselPrevious />
