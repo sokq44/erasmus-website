@@ -16,7 +16,7 @@ const MainPhoto: FC<Props> = (props) => {
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <div className={cn(loaded ? "blur-none " : "blur-xl ", "aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg scale-75")}>
+        <div className={cn(loaded ? "blur-none " : "blur-lg bg-slate-500", "aspect-w-2 aspect-h-1 w-full overflow-hidden rounded-lg scale-75")}>
             <Image
                 id={id.toString()}
                 alt="Zaznaczone zdjęcie opisujące praktyki"
