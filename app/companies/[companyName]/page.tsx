@@ -10,32 +10,39 @@ import CompanyPhotos from "@/components/company/CompanyPhotos/CompanyPhotos";
 import CompanyLogo from "@/components/company/CompanyLogo";
 
 interface Props {
-  params: { companyName: string };
+    params: { companyName: string };
 }
 
 export async function generateMetadata(props: Props) {
-  const company = companies.find((e) => e.slug === props.params.companyName);
+    const company = companies.find((e) => e.slug === props.params.companyName);
 
-  if (!company) return notFound();
+    if (!company) return notFound();
 
-  return {
-    title: `Erasmus - ${company.name}`,
-    description: company.description,
-  };
+    return {
+        title: `Erasmus - ${company.name}`,
+        description: company.description,
+    };
 }
 
 const page: FC<Props> = async (props) => {
-  const company = companies.find((e) => e.slug === props.params.companyName);
+    const company = companies.find((e) => e.slug === props.params.companyName);
+    let filePaths: string[] = [""];
 
-  if (!company) return notFound();
+    if (company) {
+        filePaths = images[company.slug];
+    } else {
+        console.error("Company not found");
+    }
 
-  return (
-    <Container className="relative">
-      <CompanyHeader className={company.textColor} company={company} />
-      <CompanyLogo company={company} />
-      <CompanyPhotos company={company}></CompanyPhotos>
-    </Container>
-  );
+    if (!company) return notFound();
+
+    return (
+        <Container className="relative py-0 gap-0">
+            <CompanyHeader className={company.textColor} company={company} />
+            <CompanyLogo company={company} />
+            <CompanyPhotos company={company} filePaths={filePaths} />
+        </Container>
+    );
 };
 
 export default page;
