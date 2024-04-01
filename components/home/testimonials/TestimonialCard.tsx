@@ -18,8 +18,8 @@ const TestimonialCard: FC<Props> = (props) => {
     const { testimonial } = props;
 
     return (
-        <CarouselItem className="md:basis-1/2 lg:basis-1/3 drop-shadow-[1px_1px_1px_rgba(0,180,216,1)]">
-            <Card>
+        <CarouselItem className="md:basis-1/2 lg:basis-1/3 drop-shadow-[1px_1px_1px_rgba(0,180,216,1)] py-2">
+            <Card className="h-full">
                 <CardHeader>
                     <div className="flex items-stretch">
                         <div>
