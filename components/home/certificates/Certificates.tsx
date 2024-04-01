@@ -19,11 +19,22 @@ const Certificates: FC<Props> = () => {
                 </h2>
 
                 <p className="max-w-2xl text-muted-foreground mt-16">
-                    Uczniowie odbywali praktyki w różnorodnych firmach,
-                    starannie dobrane tak, aby zapewnić im cenne doświadczenie
-                    zgodne z ich różnymi kierunkami nauczania. Firmy te
-                    reprezentowały różne sektory i branże, umożliwiając uczniom
-                    wszechstronny rozwój zawodowy.
+                    Certyfikaty stanowią rzetelne i klarowne potwierdzenie
+                    posiadanych umiejętności oraz doświadczenia. Są to ważne
+                    dokumenty, które świadczą o zaangażowaniu uczniów oraz ich
+                    zdolnościach, zwłaszcza w kontekście praktyk zawodowych
+                    oferowanych przez naszą szkołę.
+                </p>
+
+                <p className="max-w-2xl text-muted-foreground mt-8">
+                    Każdy uczestnik otrzymał{" "}
+                    <span className="font-bold">
+                        {" "}
+                        certyfikat potwierdzający odbycie praktyk zawodowych
+                    </span>
+                    . Certyfikaty te są dowodem na zdobyte umiejętności i
+                    doświadczenie, które uczniowie mogą wykorzystać w przyszłej
+                    karierze zawodowej.
                 </p>
             </div>
 
