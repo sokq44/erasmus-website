@@ -115,6 +115,7 @@ export const companies: Company[] = [
             street: "Street 5",
             number: "5",
         },
+        website: "https://jcvalvular.com/en/",
 
         backgroundGradient: {
             from: "from-teal-500",

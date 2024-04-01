@@ -12,7 +12,7 @@ export type Company = {
     imageScale: string;
     description: string;
 
-    subpageDescription: string;
+    subpageDescription?: string;
     website: string;
 
     textColor: string;

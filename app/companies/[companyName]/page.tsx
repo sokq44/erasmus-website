@@ -9,6 +9,8 @@ import { companies } from "@/assets/companies";
 import CompanyPhotos from "@/components/company/CompanyPhotos/CompanyPhotos";
 import CompanyLogo from "@/components/company/CompanyLogo";
 
+import { images } from "@/assets/images";
+
 interface Props {
     params: { companyName: string };
 }
