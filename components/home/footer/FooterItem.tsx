@@ -14,7 +14,7 @@ const FooterItem: FC<Props> = (props) => {
             <Link
                 href={href ? href : ""}
                 target="_blank"
-                className="flex items-center transition duration-300 relative rounded px-1 py-1 footer-item focus-visible:ring-1 focus-visible:ring-offset-2 ring-white focus:outline-none"
+                className="text-blue-200 flex items-center transition duration-300 relative rounded px-1 py-1 footer-item focus-visible:ring-1 focus-visible:ring-offset-2 ring-white focus:outline-none"
             >
                 {children}
                 &nbsp;&nbsp;
