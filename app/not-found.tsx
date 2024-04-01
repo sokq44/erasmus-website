@@ -7,9 +7,16 @@ interface Props {}
 
 const NotFound: FC<Props> = () => {
     return (
-        <Container shouldAnimate className="text-center">
+        <Container shouldAnimate className="text-center gap-16">
             <h1 className="text-4xl font-bold">Page Not Found</h1>
-            <Link href="/" className="mt-8">
+
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+                The page you are looking for does not exist. It may have been
+                moved, or it may no longer be available. Please check the URL
+                and try again.
+            </p>
+
+            <Link href="/">
                 <Button>Home page</Button>
             </Link>
         </Container>

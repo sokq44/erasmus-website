@@ -13,6 +13,7 @@ export type Company = {
     description: string;
 
     subpageDescription: string;
+    website: string;
 
     textColor: string;
     caretColor: string;
