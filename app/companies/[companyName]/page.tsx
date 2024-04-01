@@ -7,7 +7,6 @@ import Container from "@/components/home/Container";
 
 import { companies } from "@/assets/companies";
 import CompanyPhotos from "@/components/company/CompanyPhotos/CompanyPhotos";
-import { images } from "@/assets/images";
 import CompanyLogo from "@/components/company/CompanyLogo";
 
 interface Props {
@@ -27,13 +26,6 @@ export async function generateMetadata(props: Props) {
 
 const page: FC<Props> = async (props) => {
   const company = companies.find((e) => e.slug === props.params.companyName);
-  let filePaths: string[] = [""];
-
-  if (company) {
-    filePaths = images[company.slug];
-  } else {
-    console.error("Company not found");
-  }
 
   if (!company) return notFound();
 
@@ -41,7 +33,7 @@ const page: FC<Props> = async (props) => {
     <Container className="relative">
       <CompanyHeader className={company.textColor} company={company} />
       <CompanyLogo company={company} />
-      <CompanyPhotos company={company} filePaths={filePaths}></CompanyPhotos>
+      <CompanyPhotos company={company}></CompanyPhotos>
     </Container>
   );
 };
