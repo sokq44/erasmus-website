@@ -1,11 +1,18 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+export type Firm =
+    | "forja-roja"
+    | "microbit-servicio-tecnico"
+    | "samsung-electronics"
+    | "euromind"
+    | "jc-valvuar-audio";
 
 export type Company = {
-    slug: "forja-roja" | "microbit-servicio-tecnico" | "samsung-electronics" | "euromind" | "jc-valvuar-audio";
+    slug: Firm;
     name: string;
     imageSrc: string;
     imageScale: string;
     description: string;
+
+    subpageDescription: string;
 
     textColor: string;
     caretColor: string;

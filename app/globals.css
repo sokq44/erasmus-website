@@ -73,7 +73,8 @@ html {
     bottom: 0;
     left: 0;
     background-color: white;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    border-radius: 0.5rem;
 }
 
 .footer-item:hover::before {
