@@ -7,7 +7,7 @@ interface Props {}
 
 const Navbar: FC<Props> = () => {
     return (
-        <header className="py-6 bg-blue-700">
+        <header className="py-6 bg-blue-700 fixed top-0 w-full opacity-1 z-20">
             <nav className="container relative mx-auto flex justify-between items-center">
                 <Link className="sr-only text-white" href={"#malaga"}>
                     Skip to content
