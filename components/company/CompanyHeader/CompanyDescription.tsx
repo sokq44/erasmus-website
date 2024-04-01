@@ -4,21 +4,24 @@ import React, { FC } from "react";
 
 import { cn } from "@/lib/utils";
 
-import Container from "@/components/home/Container";
-
 interface Props {
-  children?: React.ReactNode;
-  className?: string;
+    children?: React.ReactNode;
+    className?: string;
 }
 
 const CompanyDescription: FC<Props> = (props) => {
-  const { children, className } = props;
+    const { children, className } = props;
 
-  return (
-    <Container className={cn("py-0 px-[15%]", className)}>
-      {children}
-    </Container>
-  );
+    return (
+        <p
+            className={cn(
+                "text-muted-foreground max-w-2xl mx-auto text-center",
+                className
+            )}
+        >
+            {children}
+        </p>
+    );
 };
 
 export default CompanyDescription;
