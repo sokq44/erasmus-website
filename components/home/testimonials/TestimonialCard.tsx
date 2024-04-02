@@ -39,9 +39,9 @@ const TestimonialCard: FC<Props> = (props) => {
                         </Avatar>
                     </div>
                 </CardHeader>
-                <CardContent className="flex items-center">
-                    <blockquote className="relative before:absolute before:bg-secondary before:w-2 before:-left-4 ml-1 before:h-4/6 before:rounded-full italic">
-                        {testimonial.testimonial}
+                <CardContent className="flex items-center relative">
+                    <blockquote className="before:absolute before:bg-secondary before:w-2 before:left-4 first-letter:text-xl first-letter:pl-2 ml-2 before:h-4/6 before:rounded-full italic">
+                        <cite>{testimonial.testimonial}</cite>
                     </blockquote>
                 </CardContent>
             </Card>

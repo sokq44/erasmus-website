@@ -10,7 +10,7 @@ interface Props {
 const Footer: FC<Props> = (props) => {
     const { children } = props;
     return (
-        <footer className="py-10 bg-gradient-to-br from-[#03045E] to-blue-900 text-white">
+        <footer className="py-10 bg-gradient-to-br from-[#03045E] to-blue-900 text-white mt-20">
             <div className="flex flex-col justify-evenly items-center md:items-start md:flex-row gap-16 md:gap-0">
                 <div>
                     <h4 className="font-bold text-xl ml-1">Organizatorzy:</h4>

@@ -14,7 +14,7 @@ import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {
     return (
-        <Container shouldAnimate={false} className="mb-20">
+        <Container shouldAnimate={false}>
             <h2
                 id="testimonials"
                 className="text-3xl font-semibold text-blue-950 mx-auto text-center"
