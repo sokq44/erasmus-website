@@ -39,7 +39,7 @@ const page: FC<Props> = async (props) => {
     if (!company) return notFound();
 
     return (
-        <Container className="relative py-0 gap-0">
+        <Container className="relative gap-0">
             <CompanyHeader className={company.textColor} company={company} />
             <CompanyLogo company={company} />
             <CompanyPhotos company={company} filePaths={filePaths} />
