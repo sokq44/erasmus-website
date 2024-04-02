@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
         img: "/testimonials/m-m.jpg",
         profile: "Informatyk",
         testimonial:
-            "Uważam że Erasmus to świetna okazja do zdobycia cennego dośwaidczenia zawodowego i poznania wielu wartościowych ludzi.",
+            "Uważam, że Erasmus to świetna okazja do zdobycia cennego doświadczenia zawodowego i poznania wielu wartościowych ludzi.",
     },
     {
         name: "Wojtek",
@@ -34,12 +34,20 @@ export const testimonials: Testimonial[] = [
         img: "/testimonials/e-w.jpg",
         profile: "Informatyk",
         testimonial:
-            "Jako osoba po praktykach w serwisie uważam, że Telemalaga Samsung to perfekcyjna możliwość do doszlifowania swoich umiejętności. Wiele dała mi praktyka w obcym kraju pod względem doświadczenia oraz doskonalenia języka",
+            "Jako osoba po praktykach w serwisie uważam, że Telemalaga Samsung to perfekcyjna możliwość do doszlifowania swoich umiejętności. Wiele dała mi praktyka w obcym kraju pod względem doświadczenia oraz doskonalenia języka.",
     },
     {
         name: "Wiktoria",
         img: "/testimonials/e-w.jpg",
         profile: "Programista",
-        testimonial: "",
+        testimonial:
+            "Staż zagraniczny pozwolił mi nie tylko na zdobycie cennych umiejętności zawodowych, ale również poznanie nowych osób i kultury.",
+    },
+    {
+        name: "Piotrek",
+        img: "/testimonials/e-w.jpg",
+        profile: "Programista",
+        testimonial:
+            "Dzięki praktykom w Hiszpanii jestem bogatszy o doświadczenie zawodowe i umiejętności, które chcę wykorzystać w przyszłości.",
     },
 ];

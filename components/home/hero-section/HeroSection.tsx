@@ -8,7 +8,7 @@ import ImagesGrid from "./ImagesGrid";
 
 const HeroSection = () => {
     return (
-        <Container className="py-0 flex justify-between mt-20 lg:justify-center xl:justify-between flex-col lg:flex-row relative gap-16 lg:gap-8">
+        <Container className="flex justify-between mt-20 lg:justify-center xl:justify-between flex-col lg:flex-row relative gap-16 lg:gap-8">
             <div className="flex flex-col">
                 <HeroTitle
                     className="from-[#03045E] to-[#0077B6] py-1"
