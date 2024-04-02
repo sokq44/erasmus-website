@@ -1,4 +1,4 @@
-const images = {
+export const images: { [comapny: string]: string[]} = {
   "forja-roja": [
     "/companies-images/forja-roja/20240327_114542.jpg",
     "/companies-images/forja-roja/20240327_114549.jpg",
@@ -72,5 +72,3 @@ const images = {
     "/companies-images/samsung-electronics/inbound915133963576365182_hoAGTg.jpg"
   ]
 }; 
-
-export { images };

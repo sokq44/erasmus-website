@@ -4,12 +4,9 @@ import React, { FC, useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
-import type { Company } from "@/types/company";
-
 import { motion } from "framer-motion";
 
-import Container from "../../home/Container";
-import MainPhoto from "./MainPhoto";
+import Container from "@/components/home/Container";
 import {
   Carousel,
   CarouselContent,
@@ -17,8 +14,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
+import MainPhoto from "./MainPhoto";
 import SecondaryPhoto from "./SecondaryPhoto";
-import { Image } from "@/types/image";
+
+import type { Company } from "@/types/company";
+import type { Image } from "@/types/image";
 
 interface Props {
   company: Company;
@@ -42,10 +43,10 @@ const CompanyPhotos: FC<Props> = (props) => {
   }, []);
 
   return (
-    <Container className="mt-20">
-      <span className={cn("text-4xl font-bold mx-auto ", company.textColor)}>
-        Zdjęcia
-      </span>
+    <Container className="py-16">
+      <h2 className={cn("text-4xl font-bold mx-auto ", company.textColor)}>
+        Galeria zdjęć
+      </h2>
       {images.length > 0 && <MainPhoto img={images[selectedImageId]} />}
       <Carousel className="mx-auto w-[80%]">
         <CarouselContent>
@@ -70,10 +71,10 @@ const CompanyPhotos: FC<Props> = (props) => {
           ))}
         </CarouselContent>
         <CarouselNext
-          renderNextImage={() => setSelectedImageId(selectedImageId + 1)}
+          renderNextImage={() => setSelectedImageId((prev) => (prev += 1))}
         />
         <CarouselPrevious
-          renderNextImage={() => setSelectedImageId(selectedImageId - 1)}
+          renderNextImage={() => setSelectedImageId((prev) => (prev -= 1))}
         />
       </Carousel>
     </Container>

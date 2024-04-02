@@ -14,16 +14,16 @@ import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {
     return (
-        <Container shouldAnimate={false} className="mb-20">
+        <Container shouldAnimate={false}>
             <h2
                 id="testimonials"
                 className="text-3xl font-semibold text-blue-950 mx-auto text-center"
             >
-                Świadectwa uczniów
+                Relacje uczniów
             </h2>
 
             <p className="max-w-2xl text-muted-foreground mx-auto text-left md:text-center mt-16">
-                Przeczytaj, co uczestnicy projektu mają do powiedzenia o swoich
+                Przeczytaj, co uczestnicy projektu mówią o swoich
                 doświadczeniach w Maladze! To więcej niż tylko słowa - to
                 prawdziwe historie o odwadze, odkryciach i rozwoju osobistym.
                 Poznaj ich perspektywę na niezapomniane chwile spędzone za
@@ -31,7 +31,7 @@ const Testimonials = () => {
             </p>
 
             <Carousel className="m-auto mt-24 w-[80%]">
-                <CarouselContent>
+                <CarouselContent className="px-2 py-1">
                     {testimonials.map((testimonial, index) => (
                         <TestimonialCard
                             key={index}
