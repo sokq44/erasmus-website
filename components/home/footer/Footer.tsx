@@ -9,6 +9,9 @@ interface Props {
 
 const Footer: FC<Props> = (props) => {
     const { children } = props;
+
+    const today = React.useMemo(() => new Date(), []);
+
     return (
         <footer className="py-10 bg-gradient-to-br from-[#03045E] to-blue-900 text-white mt-20">
             <div className="flex flex-col justify-evenly items-center md:items-start md:flex-row gap-16 md:gap-0">
@@ -26,6 +29,7 @@ const Footer: FC<Props> = (props) => {
                         </FooterItem>
                     </ul>
                 </div>
+
                 <div>
                     <h4 className="font-bold text-xl ml-1">Autorzy:</h4>
                     <ul className="mt-4">
@@ -44,9 +48,10 @@ const Footer: FC<Props> = (props) => {
                     </ul>
                 </div>
             </div>
+
             <div className="text-center mt-16 mx-8">
-                &copy; Copyright 2024 Zespół Szkół Elektronicznych i Licealnych
-                w Warszawie
+                &copy; Copyright {today.getFullYear()} Zespół Szkół
+                Elektronicznych i Licealnych w Warszawie
             </div>
             {children}
         </footer>
