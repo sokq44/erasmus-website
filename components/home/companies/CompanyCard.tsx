@@ -48,11 +48,11 @@ const CompanyCard: FC<Props> = (props) => {
                     transition={{ duration: 0.2 }}
                 >
                     <Card.Card>
-                        <Card.CardHeader className="max-w-md flex flex-col gap-4">
+                        <Card.CardHeader className="flex flex-col gap-4">
                             <Card.CardTitle>
                                 {props.company.name}
                             </Card.CardTitle>
-                            <Card.CardDescription className="my-8">
+                            <Card.CardDescription className="my-8 max-w-md">
                                 {props.company.description}
                             </Card.CardDescription>
                         </Card.CardHeader>

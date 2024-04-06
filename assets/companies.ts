@@ -77,7 +77,7 @@ export const companies: Company[] = [
     },
     {
         slug: "samsung-electronics",
-        name: "Samsung Electronics",
+        name: "Telemalaga Samsung Customer Service",
         imageSrc: "/companies-logos/samsung-electronics.png",
         imageScale: "scale-x-100 scale-y-100",
         description:
