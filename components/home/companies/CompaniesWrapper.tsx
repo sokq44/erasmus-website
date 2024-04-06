@@ -35,7 +35,7 @@ const backgroundGradients: { from: string; to: string; ring: string }[] = [
 
 const CompaniesWrapper = () => {
     return (
-        <Container className="gap-8 md:gap-16 z-10" id="companies">
+        <Container className="gap-16 md:gap-32 z-10" id="companies">
             <h2
                 className="text-3xl font-semibold text-blue-950 text-center"
                 id="companies"
@@ -77,7 +77,7 @@ const CompaniesWrapper = () => {
                     className="rounded-lg mx-auto md:mx-0"
                 />
 
-                <p className="max-w-2xl text-muted-foreground mt-8">
+                <p className="max-w-2xl text-muted-foreground">
                     W przypadku omawianego projektu, uczniowie odbywali praktyki
                     w firmach{" "}
                     <span className="font-bold">celowo dobranych</span> pod
@@ -92,7 +92,7 @@ const CompaniesWrapper = () => {
                 </p>
             </div>
 
-            <h3 className="text-2xl font-semibold text-blue-950 text-center my-16">
+            <h3 className="text-2xl font-semibold text-blue-950 text-center">
                 Uczniowie odbyli praktyki w firmach takich jak:
             </h3>
 
