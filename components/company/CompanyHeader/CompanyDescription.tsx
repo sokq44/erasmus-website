@@ -2,26 +2,33 @@
 
 import React, { FC } from "react";
 
-import { cn } from "@/lib/utils";
-
 interface Props {
-    children?: React.ReactNode;
-    className?: string;
+  text?: string[];
+  className?: string;
 }
 
 const CompanyDescription: FC<Props> = (props) => {
-    const { children, className } = props;
+  const { text } = props;
+
+  const content = text!.map((paragraph, index) => {
+    if (index > 0)
+      return (
+        <p
+          key=""
+          className="text-muted-foreground max-w-2xl mx-auto text-left mt-8"
+        >
+          {paragraph}
+        </p>
+      );
 
     return (
-        <p
-            className={cn(
-                "text-muted-foreground max-w-2xl mx-auto text-center",
-                className
-            )}
-        >
-            {children}
-        </p>
+      <p key="" className="text-muted-foreground max-w-2xl mx-auto text-left">
+        {paragraph}
+      </p>
     );
+  });
+
+  return content;
 };
 
 export default CompanyDescription;
