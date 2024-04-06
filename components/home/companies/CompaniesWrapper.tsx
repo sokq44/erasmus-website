@@ -85,8 +85,8 @@ const CompaniesWrapper = () => {
                     <span className="font-bold">kierunków nauczania</span>.
                     Oznacza to, że firmy te zostały wyselekcjonowane na
                     podstawie{" "}
-                    <span className="font-bold">szczegółowej analizy</span>
-                    ich profilu działalności, oferowanych stanowisk i możliwości
+                    <span className="font-bold">szczegółowej analizy</span> ich
+                    profilu działalności, oferowanych stanowisk i możliwości
                     rozwoju, tak aby idealnie odpowiadać potrzebom i
                     oczekiwaniom uczniów.
                 </p>
