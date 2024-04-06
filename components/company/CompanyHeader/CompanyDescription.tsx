@@ -3,32 +3,25 @@
 import React, { FC } from "react";
 
 interface Props {
-  text?: string[];
-  className?: string;
+    text?: string[];
+    className?: string;
 }
 
 const CompanyDescription: FC<Props> = (props) => {
-  const { text } = props;
-
-  const content = text!.map((paragraph, index) => {
-    if (index > 0)
-      return (
-        <p
-          key=""
-          className="text-muted-foreground max-w-2xl mx-auto text-left mt-8"
-        >
-          {paragraph}
-        </p>
-      );
+    const { text } = props;
 
     return (
-      <p key="" className="text-muted-foreground max-w-2xl mx-auto text-left">
-        {paragraph}
-      </p>
+        <div className={props.className}>
+            {text!.map((paragraph) => (
+                <p
+                    key=""
+                    className="text-muted-foreground max-w-2xl mx-auto text-left"
+                >
+                    {paragraph}
+                </p>
+            ))}
+        </div>
     );
-  });
-
-  return content;
 };
 
 export default CompanyDescription;

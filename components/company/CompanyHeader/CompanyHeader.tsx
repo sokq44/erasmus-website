@@ -28,9 +28,10 @@ const CompanyHeader: FC<Props> = (props) => {
             >
                 <AnimatedTitle company={company} />
             </Container>
-            <CompanyDescription className="mt-8">
-                {company.description}
-            </CompanyDescription>
+            <CompanyDescription
+                className="mt-16 space-y-8"
+                text={company.subpageDescription}
+            />
         </>
     );
 };
