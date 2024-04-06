@@ -3,6 +3,7 @@ import React from "react";
 import { companies } from "@/assets/companies";
 import CompanyCard from "./CompanyCard";
 import Container from "@/components/home/Container";
+import Image from "next/image";
 
 const backgroundGradients: { from: string; to: string; ring: string }[] = [
     {
@@ -34,20 +35,57 @@ const backgroundGradients: { from: string; to: string; ring: string }[] = [
 
 const CompaniesWrapper = () => {
     return (
-        <Container className="gap-8 z-10" id="companies">
-            <h2 className="text-3xl font-semibold text-blue-950" id="companies">
-                Firmy
+        <Container className="gap-8 md:gap-16 z-10" id="companies">
+            <h2
+                className="text-3xl font-semibold text-blue-950 text-center"
+                id="companies"
+            >
+                Dobór firm kluczem do rozwoju na praktykach
             </h2>
 
-            <p className="max-w-2xl text-muted-foreground">
-                Uczniowie odbywali praktyki w różnorodnych firmach, starannie
-                dobrane tak, aby zapewnić im cenne doświadczenie zgodne z ich
-                różnymi kierunkami nauczania. Firmy te reprezentowały różne
-                sektory i branże, umożliwiając uczniom wszechstronny rozwój
-                zawodowy.
-            </p>
+            <div className="flex flex-col md:flex-row items-start justify-evenly gap-16">
+                <p className="max-w-2xl text-muted-foreground">
+                    Praktyki zawodowe stanowią integralną część edukacji,
+                    oferując uczniom niepowtarzalną okazję do zdobycia cennych
+                    doświadczeń i umiejętności w realnym środowisku pracy. Aby
+                    zmaksymalizować korzyści płynące z praktyk, kluczowy jest
+                    staranny dobór firm, które zapewnią uczniom optymalne
+                    warunki do rozwoju zawodowego.
+                </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mt-16">
+                <Image
+                    src={"/work-time.svg"}
+                    alt="Forja Roja logo"
+                    width={250}
+                    height={100}
+                    className="rounded-lg mx-auto md:mx-0"
+                />
+            </div>
+
+            <div className="flex flex-col-reverse md:flex-row items-start justify-evenly gap-16">
+                <Image
+                    src={"/certificate.svg"}
+                    alt="Forja Roja logo"
+                    width={150}
+                    height={100}
+                    className="rounded-lg mx-auto md:mx-0"
+                />
+
+                <p className="max-w-2xl text-muted-foreground mt-8">
+                    W przypadku omawianego projektu, uczniowie odbywali praktyki
+                    w firmach celowo dobranych pod kątem ich kierunków
+                    nauczania. Oznacza to, że firmy te zostały wyselekcjonowane
+                    na podstawie szczegółowej analizy ich profilu działalności,
+                    oferowanych stanowisk i możliwości rozwoju, tak aby idealnie
+                    odpowiadać potrzebom i oczekiwaniom uczniów.
+                </p>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-blue-950 text-center my-16">
+                Uczniowie odbyli praktyki w firmach takich jak:
+            </h3>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                 {companies.map((company, index) => (
                     <CompanyCard
                         key={company.name}

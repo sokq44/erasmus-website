@@ -22,13 +22,15 @@ const CompanyHeader: FC<Props> = (props) => {
         <>
             <Container
                 className={cn(
-                    "text-5xl text-center font-bold mx-auto pb-10 pt-0",
+                    "text-5xl text-center font-bold mx-auto py-0 md:py-0",
                     className
                 )}
             >
                 <AnimatedTitle company={company} />
             </Container>
-            <CompanyDescription>{company.description}</CompanyDescription>
+            <CompanyDescription className="mt-8">
+                {company.description}
+            </CompanyDescription>
         </>
     );
 };
