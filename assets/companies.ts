@@ -10,7 +10,7 @@ export const companies: Company[] = [
       "Forja Roja to firma z siedzibą w Maladze, specjalizująca się w tworzeniu gier wideo i modelowaniu 3D. Forja Roja oferuje praktyki dla studentów z całej Europy.",
     subpageDescription: [
       "Na praktykach zawodowych w tej firmie nasi uczniowie poznawanie proces tworzenia gier wideo i modelowania 3D.",
-      "Przez pierwsze 2 tygodnie zagłębiali się oni w świat Game Development'u i poznawali podstawy programowania w Unity. Głównym zadaniem było stworzenie gry wideo 2D typu Platformer, w której to użytkownik wciela się w postać różne postacie i pokonuje przeszkody.",
+      "Przez pierwsze 2 tygodnie zagłębiali się oni w świat Game Development'u i poznawali podstawy programowania w Unity. Głównym zadaniem było stworzenie gry wideo 2D typu Platformer, w której to użytkownik wciela się w różne postacie i pokonuje przeszkody próbując dojść do celu.",
       "W kolejnym tygodniu uczniowie poznawali tajniki modelowania 3D w Blenderze. Ich zadaniem było stworzenie własnego modelu 3D, który następnie został wydrukowany na drukarce 3D. Praktyka zawodowa odbywała się w języku angielskim oraz hiszpańskim, co pozwoliło uczniom na doskonalenie swoich umiejętności językowych.",
     ],
     textColor: "text-red-600",
@@ -98,7 +98,7 @@ export const companies: Company[] = [
       "Samsung Electronics to firma z siedzibą w Seulu, specjalizująca się w produkcji elektroniki. Firma oferuje praktyki dla studentów z programu Erasmus+.",
     subpageDescription: [
       "W tej firmie nasi uczniowie uczyli się naprawy oraz konfiguracji sprzętu elektronicznego firmy Samsung.",
-      "Mieli oni do czynienia z takimi sprzętami jak telefony z linii Samsung Fold albo Samsung Flip. Po za naprawą sprzętu, uczniowie mieli okazję doświadczyć pracy z oprogramowanie wcześniej wspomnianych urządzeń na niskim poziomie. Praktyka zawodowa odbywała się w języku angielskim oraz hiszpańskim, co pozwoliło uczniom na doskonalenie swoich umiejętności językowych.",
+      "Mieli oni do czynienia z takimi sprzętami jak telefony z linii Samsung Fold albo Samsung Flip. Po za naprawą sprzętu, uczniowie mieli okazję doświadczyć niskopoziomowej pracy z oprogramowaniem wcześniej wspomnianych urządzeń. Praktyka zawodowa odbywała się w języku angielskim oraz hiszpańskim, co pozwoliło uczniom na doskonalenie swoich umiejętności językowych.",
     ],
     textColor: "text-blue-600",
     caretColor: "bg-blue-600",
@@ -125,7 +125,10 @@ export const companies: Company[] = [
     imageScale: "scale-x-100 scale-y-100",
     description:
       "JC VALVUAR AUDIO to firma z siedzibą w Maladze, specjalizująca się w produkcji wzmacniaczy gitarowych. Firma oferuje praktyki dla studentów z programu Erasmus+.",
-    subpageDescription: [""],
+    subpageDescription: [
+      "Podczas praktyki zawodowej w firmie JC VALVUAR AUDIO, praktykant był zaangażowany w różnorodne zadania obejmujące lutowanie elementów elektronicznych, tworzenie płytek PCB oraz precyzyjne wydrążanie otworów zarówno w płytach PCB, jak i w blachach. Dodatkowo, praktykant brał udział w procesie montażu, w tym wydrążaniu otworów w obudowie wzmacniacza audio, co wymagało precyzji oraz zdolności manualnych. Ta praktyka zapewniła mu szeroki wgląd w praktyczne aspekty produkcji urządzeń audio oraz umożliwiła rozwój umiejętności technicznych w dziedzinie elektroniki.",
+      "Praktyka zawodowa odbywała się w języku angielskim oraz hiszpańskim, co pozwoliło uczniom na doskonalenie swoich umiejętności językowych.",
+    ],
     textColor: "text-black",
     caretColor: "bg-black",
     address: {
