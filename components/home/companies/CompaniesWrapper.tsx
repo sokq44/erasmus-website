@@ -46,11 +46,17 @@ const CompaniesWrapper = () => {
             <div className="flex flex-col md:flex-row items-start justify-evenly gap-16">
                 <p className="max-w-2xl text-muted-foreground">
                     Praktyki zawodowe stanowią integralną część edukacji,
-                    oferując uczniom niepowtarzalną okazję do zdobycia cennych
-                    doświadczeń i umiejętności w realnym środowisku pracy. Aby
+                    oferując uczniom niepowtarzalną okazję do{" "}
+                    <span className="font-bold">
+                        zdobycia cennych doświadczeń
+                    </span>{" "}
+                    i umiejętności w realnym środowisku pracy. Aby
                     zmaksymalizować korzyści płynące z praktyk, kluczowy jest
-                    staranny dobór firm, które zapewnią uczniom optymalne
-                    warunki do rozwoju zawodowego.
+                    staranny dobór firm, które zapewnią uczniom{" "}
+                    <span className="font-bold">
+                        optymalne warunki do rozwoju zawodowego
+                    </span>
+                    .
                 </p>
 
                 <Image
@@ -73,11 +79,16 @@ const CompaniesWrapper = () => {
 
                 <p className="max-w-2xl text-muted-foreground mt-8">
                     W przypadku omawianego projektu, uczniowie odbywali praktyki
-                    w firmach celowo dobranych pod kątem ich kierunków
-                    nauczania. Oznacza to, że firmy te zostały wyselekcjonowane
-                    na podstawie szczegółowej analizy ich profilu działalności,
-                    oferowanych stanowisk i możliwości rozwoju, tak aby idealnie
-                    odpowiadać potrzebom i oczekiwaniom uczniów.
+                    w firmach{" "}
+                    <span className="font-bold">celowo dobranych</span> pod
+                    kątem ich{" "}
+                    <span className="font-bold">kierunków nauczania</span>.
+                    Oznacza to, że firmy te zostały wyselekcjonowane na
+                    podstawie{" "}
+                    <span className="font-bold">szczegółowej analizy</span>
+                    ich profilu działalności, oferowanych stanowisk i możliwości
+                    rozwoju, tak aby idealnie odpowiadać potrzebom i
+                    oczekiwaniom uczniów.
                 </p>
             </div>
 
