@@ -13,7 +13,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const Container: FC<Props> = (props) => {
     return props.shouldAnimate ? (
         <motion.section
-            className={cn("py-20 flex flex-col", props.className)}
+            className={cn("py-8 md:py-20 flex flex-col", props.className)}
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.15 }}
@@ -23,7 +23,7 @@ const Container: FC<Props> = (props) => {
         </motion.section>
     ) : (
         <section
-            className={cn("py-20 flex flex-col", props.className)}
+            className={cn("py-8 md:py-20 flex flex-col", props.className)}
             id={`${props.id}`}
         >
             {props.children}
