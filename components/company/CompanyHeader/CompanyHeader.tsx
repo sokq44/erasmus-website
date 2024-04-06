@@ -44,7 +44,7 @@ const CompanyHeader: FC<Props> = (props) => {
                     cursorClassName={bgColors[company.slug]}
                 />
             </Container>
-            <CompanyDescription>{company.description}</CompanyDescription>
+            <CompanyDescription text={company.subpageDescription}/>
         </>
     );
 };
