@@ -6,7 +6,7 @@ export const testimonials: Testimonial[] = [
     img: "/testimonials/s-g.jpg",
     profile: "Programista",
     testimonial:
-      "Udało mi się Zdobyć cenne doświadczenie zawodowe. Bardzo mi się również podobał fakt rozwijania wiedzy w innym kraju.",
+      "Udało mi się zdobyć cenne doświadczenie zawodowe. Bardzo mi się również podobał fakt rozwijania wiedzy w innym kraju.",
   },
   {
     name: "Maks",
@@ -20,21 +20,21 @@ export const testimonials: Testimonial[] = [
     img: "/testimonials/w-a.jpg",
     profile: "Informatyk",
     testimonial:
-      "W porównaniu do polskich praktyk, te hiszpańskie okazały się o wiele cenniejsze w doświadczenia techniczne jak i te językowe.",
+      "W porównaniu do polskich praktyk hiszpańskie okazały się o wiele cenniejsze w doświadczenia techniczne jak i te językowe.",
   },
   {
     name: "Eryk",
     img: "/testimonials/e-w.jpg",
     profile: "Programista",
     testimonial:
-      "Na praktykach poznałem nowe zagadnienia, które zgadzają się z moimi zainteresowaniami zawodowymi, oraz spotkałem świetnych pracodawców, którzy oświecili mi te kwestie.",
+      "Na praktykach poznałem nowe zagadnienia, które zgadzają się z moimi zainteresowaniami zawodowymi oraz spotkałem świetnych pracodawców, którzy przybliżyli mi te kwestie.",
   },
   {
     name: "Wiktoria",
     img: "/testimonials/w-w.png",
     profile: "Programista",
     testimonial:
-      "Staż zagraniczny pozwolił mi nie tylko na zdobycie cennych umiejętności zawodowych, ale również poznanie nowych osób i kultury.",
+      "Staż zagraniczny pozwolił mi nie tylko na zdobycie cennych umiejętności zawodowych ale również poznanie nowych osób oraz kultury.",
   },
   {
     name: "Piotrek",

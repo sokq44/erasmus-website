@@ -40,7 +40,7 @@ const TestimonialCard: FC<Props> = (props) => {
                     </div>
                 </CardHeader>
                 <CardContent className="flex items-center relative">
-                    <blockquote className="before:absolute before:bg-secondary before:w-1 before:left-4 ml-2 first-letter:pl-2 before:h-5/6 before:rounded-full">
+                    <blockquote className="before:absolute before:bg-secondary before:w-1 before:left-4 ml-2 before:h-5/6 before:rounded-full">
                         <cite>{testimonial.testimonial}</cite>
                     </blockquote>
                 </CardContent>

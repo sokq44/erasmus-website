@@ -21,7 +21,7 @@ const HeroSection = () => {
                     delay={0.05}
                 >
                     Projekt Erasmus w Maladze był przełomowym doświadczeniem,
-                    cechującym się rozwojem zawodowym, oraz głębokim zanurzeniem
+                    cechującym się rozwojem zawodowym oraz głębokim zanurzeniem
                     w kulturze. Uczestnicy mieli okazję poznać hiszpańskie
                     tradycje, odbyć praktyki zawodowe i rozwijać cenne
                     umiejętności w otoczeniu pełnym życia i gościnności.

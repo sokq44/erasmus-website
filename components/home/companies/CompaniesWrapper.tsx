@@ -45,7 +45,7 @@ const CompaniesWrapper = () => {
 
             <div className="flex flex-col md:flex-row items-start justify-evenly gap-16">
                 <p className="max-w-2xl text-muted-foreground">
-                    Praktyki zawodowe stanowią integralną część edukacji,
+                    Praktyki zawodowe stanowią integralną część edukacji
                     oferując uczniom niepowtarzalną okazję do{" "}
                     <span className="font-bold">
                         zdobycia cennych doświadczeń
@@ -78,7 +78,7 @@ const CompaniesWrapper = () => {
                 />
 
                 <p className="max-w-2xl text-muted-foreground">
-                    W przypadku omawianego projektu, uczniowie odbywali praktyki
+                    W przypadku omawianego projektu uczniowie odbywali praktyki
                     w firmach{" "}
                     <span className="font-bold">celowo dobranych</span> pod
                     kątem ich{" "}
@@ -87,7 +87,7 @@ const CompaniesWrapper = () => {
                     podstawie{" "}
                     <span className="font-bold">szczegółowej analizy</span> ich
                     profilu działalności, oferowanych stanowisk i możliwości
-                    rozwoju, tak aby idealnie odpowiadać potrzebom i
+                    rozwoju tak, aby idealnie odpowiadać potrzebom i
                     oczekiwaniom uczniów.
                 </p>
             </div>

@@ -1,19 +1,25 @@
-export const images: { [comapny: string]: string[]} = {
+export const images = {
   "forja-roja": [
     "/companies-images/forja-roja/20240327_114542.jpg",
     "/companies-images/forja-roja/20240327_114549.jpg",
     "/companies-images/forja-roja/IMG_20240313_093413.jpg",
     "/companies-images/forja-roja/IMG_20240329_093409.jpg",
     "/companies-images/forja-roja/IMG_20240329_093411.jpg",
+    "/companies-images/forja-roja/IMG_20240329_093433.jpg",
+    "/companies-images/forja-roja/living-room(1).png",
+    "/companies-images/forja-roja/living-room.png",
+    "/companies-images/forja-roja/rabbit.png",
     "/companies-images/forja-roja/received_1095132878480959.jpeg",
     "/companies-images/forja-roja/received_1551097102407854.jpeg",
     "/companies-images/forja-roja/received_1637564570322395.jpeg",
     "/companies-images/forja-roja/received_383350044617314.jpeg",
+    "/companies-images/forja-roja/received_442926161498545.jpeg",
     "/companies-images/forja-roja/received_793029959349343.jpeg",
     "/companies-images/forja-roja/received_830526878910363.jpeg",
     "/companies-images/forja-roja/received_895990115611004.jpeg",
     "/companies-images/forja-roja/received_912550353887581.jpeg",
-    "/companies-images/forja-roja/received_959355822200299.jpeg"
+    "/companies-images/forja-roja/received_959355822200299.jpeg",
+    "/companies-images/forja-roja/robot.png"
   ],
   "euromind": [
     "/companies-images/euromind/received_1186064069041726.jpeg",
@@ -61,7 +67,12 @@ export const images: { [comapny: string]: string[]} = {
     "/companies-images/microbit-servicio-tecnico/inbound5519341600766260002_uYrVqT.jpg",
     "/companies-images/microbit-servicio-tecnico/inbound5795412858298749306_b3ob6H.jpg",
     "/companies-images/microbit-servicio-tecnico/inbound6413338551370805227_uYrVqT.jpg",
-    "/companies-images/microbit-servicio-tecnico/inbound934660726551506805_uYrVqT.jpg"
+    "/companies-images/microbit-servicio-tecnico/inbound934660726551506805_uYrVqT.jpg",
+    "/companies-images/microbit-servicio-tecnico/received_1713691055822137.jpeg",
+    "/companies-images/microbit-servicio-tecnico/received_382919237984078.jpeg",
+    "/companies-images/microbit-servicio-tecnico/received_763758255724999.jpeg",
+    "/companies-images/microbit-servicio-tecnico/received_771655291777440.jpeg",
+    "/companies-images/microbit-servicio-tecnico/received_949485876778354.jpeg"
   ],
   "samsung-electronics": [
     "/companies-images/samsung-electronics/inbound32555509046362644_hoAGTg.jpg",
@@ -69,6 +80,9 @@ export const images: { [comapny: string]: string[]} = {
     "/companies-images/samsung-electronics/inbound4156321322855723813_hoAGTg.jpg",
     "/companies-images/samsung-electronics/inbound6159051543560907630_E0RXnl.jpg",
     "/companies-images/samsung-electronics/inbound7687655487177448270_hoAGTg.jpg",
-    "/companies-images/samsung-electronics/inbound915133963576365182_hoAGTg.jpg"
+    "/companies-images/samsung-electronics/inbound915133963576365182_hoAGTg.jpg",
+    "/companies-images/samsung-electronics/received_1884410535347488.jpeg",
+    "/companies-images/samsung-electronics/received_441140585048924.jpeg",
+    "/companies-images/samsung-electronics/received_948882836515853.jpeg"
   ]
-}; 
+};
