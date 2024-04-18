@@ -2,6 +2,13 @@ import type { Testimonial } from "@/types/testimonial";
 
 export const testimonials: Testimonial[] = [
   {
+    name: "Kuba",
+    img: "/testimonials/k-l.jpg",
+    profile: "Informatyk",
+    testimonial:
+    "Praktyki zagraniczne to świetna okazja do zdobycia nowych umiejętności oraz poznania nowych kultur.",
+  },
+  {
     name: "Stasiek",
     img: "/testimonials/s-g.jpg",
     profile: "Programista",
